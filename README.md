@@ -9,16 +9,6 @@
     [![미리보기](UnityProject/Jump.gif)]()
 
     </center>
-
-    - [Darkest_Lives]()
-  
-    <center>
-
-    [![미리보기]()]()
-
-    </center>
-
-
   
   - 졸업 프로젝트 (개인)
     - [네트워크 4인 슈팅 게임( in Android and PC )]()
@@ -33,18 +23,18 @@
 
 
 ## Java Project
- - Doodle 점프 모작
+ - [Doodle 점프 모작]()
   
     <center>
 
-    ![미리보기](JavaProject/Jumping.gif)
+    [![미리보기](JavaProject/Jumping.gif)]()
 
     </center>
 
- - 단어외우기 프로그램
+ - [단어외우기 프로그램]()
 
     <center>
 
-    ![미리보기](JavaProject/wordStudy.gif)
+    [![미리보기](JavaProject/wordStudy.gif)]()
 
     </center>

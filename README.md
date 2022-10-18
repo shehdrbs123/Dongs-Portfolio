@@ -2,7 +2,7 @@
 
 ## Unity Project
   - Team Project  
-      - [3D Jump Game(출시 예정)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/Slippery%20Man)
+      - [3D Jump Game](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/Slippery%20Man)
   
     <center>
 

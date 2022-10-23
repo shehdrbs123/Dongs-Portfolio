@@ -22,6 +22,9 @@
  - [Client Panel](#connect-scene-client-panel)
  - [Waitroom Panel](#connect-scene-waitroom-panel)
 
+
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
+
 <br>
 
 ## Connect Scene Main
@@ -47,7 +50,7 @@
     - SceneManagement.SceneManager.LoadScene(string)을 이용
 
 
-## [돌아가기](#connect-scenelobby)
+## [위로가기](#connect-scenelobby)
 
 <br>
 
@@ -68,7 +71,7 @@
    - UIChangeTo 함수로 MainPanel로 변경
 
 
-## [돌아가기](#connect-scenelobby)
+## [위로가기](#connect-scenelobby)
 
 <br>
 
@@ -88,7 +91,7 @@
    - ConnectSceneButtonScript.OnClickCreateInHost() 연결됨
    - UIChangeTo 함수로 MainPanel로 변경
 
-## [돌아가기](#connect-scenelobby)
+## [위로가기](#connect-scenelobby)
 
 <br>
 
@@ -125,4 +128,6 @@
   -  NetworkLobbyManager가 네트워크에 연결되면, 자동적으로 LobbyPlayer를 생성
   -  LobbyPlayer의 OnClientEnterLobby()이벤트 발생
 
-## [돌아가기](#connect-scenelobby)
+## [위로가기](#connect-scenelobby)
+
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)

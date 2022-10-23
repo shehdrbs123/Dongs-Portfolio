@@ -7,7 +7,7 @@
 
 ## 바로가기
  - [Main Scene](#main-scene)
- - [Connect Scene](#main-scene)
+ - [Connect Scene](connect-scene(lobby))
  - [Ingame Scene](#main-scene)
 <br>
 <br>

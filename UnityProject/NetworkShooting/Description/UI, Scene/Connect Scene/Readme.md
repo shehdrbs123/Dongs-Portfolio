@@ -1,4 +1,4 @@
-dls# Connect Scene
+# Connect Scene
 
 ## 개요
 - Connect Scene의 구현/설계 구조에 대한 문서입니다.

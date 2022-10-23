@@ -10,7 +10,6 @@
   - [적2](#적2)
   - [Boss](#boss)
 
----
 <br>
 
 ## Spawner

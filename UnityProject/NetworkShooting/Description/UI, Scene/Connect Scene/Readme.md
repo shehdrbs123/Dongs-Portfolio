@@ -95,26 +95,27 @@
 ## Connect Scene Waitroom Panel
 
 
+
 <table>
-  <tr>
-    <td><center><H3><b>실제화면</b></H3></<center></td>
-    <td colspan=><center><H3><b>네트워크의 접속, Waitroom Panel 전환 요청 이후 setting 과정</b></H3></center></td>
+  <tr align=center>
+    <td><H3><b>실제화면</b></H3></</td>
+    <td><H3><b>네트워크의 접속, Waitroom Panel 전환 요청 이후 setting 과정</b></H3></td>
   </tr>
-  <tr>
-    <td><center><img src=" ../_Image/Connect%20Scene%20Waitroom.png"></center></td>
-    <td colspan=><center><img src=" ../_Image/Waitroom%20%EC%A0%91%EC%86%8D%20%ED%9B%84%20%EC%84%A4%EC%A0%95%EA%B3%BC%EC%A0%95.png"></center></td>
+  <tr align=center >
+    <td><img src=" ../_Image/Connect%20Scene%20Waitroom.png"></td>
+    <td colspan=><img src=" ../_Image/Waitroom%20%EC%A0%91%EC%86%8D%20%ED%9B%84%20%EC%84%A4%EC%A0%95%EA%B3%BC%EC%A0%95.png"></td>
   </tr>
-  <tr>
-    <td colspan="2"><center><H3><b>Ready 후 Text(Ready) 변경 과정</b></H3></center></td>
+  <tr align=center>
+    <td colspan="2"><H3><b>Ready 후 Text(Ready) 변경 과정</b></H3></td>
   </tr>
-  <tr>
-    <td colspan="2"><center><img src="../_Image/Waitroom%20Ready%20후%20Text%20변경과정.png"></center></td>
+  <tr align=center>
+    <td colspan="2"><img src="../_Image/Waitroom%20Ready%20후%20Text%20변경과정.png"></td>
   </tr>
-  <tr>
-    <td colspan="2"><center><H3><b>Button 구현 도식도</b></H3></center></td>
+  <tr align=center>
+    <td colspan="2"><H3><b>Button 구현 도식도</b></H3></td>
   </tr>
-  <tr>
-    <td colspan="2"><center><img src="../_Image/Waitroom%20Button%20설계%20내용.png"><center></td>
+  <tr align=center>
+    <td colspan="2"><img src="../_Image/Waitroom%20Button%20설계%20내용.png"></td>
   </tr>
 
 </table>

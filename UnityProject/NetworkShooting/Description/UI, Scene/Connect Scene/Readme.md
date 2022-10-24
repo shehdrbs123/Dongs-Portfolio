@@ -4,10 +4,10 @@
 | <H3><b>UI Panel Flow Chart</b></H3>|
 |:---:|
 |![미리보기](../_Image/Connect%20Scene%20UIFlowChart.png)|
-- 다음은 씬 내 패널의 Flow 차트를 설명한 이미지 입니다.
+- 다음은 Scene 내 Panel의 Flow 차트를 설명한 이미지 입니다.
 - Connect Scene Button Script/ CommonButton Script는 UI 최상단 오브젝트 컴포넌트로 등록
 - Connect Scene Button Script 
-  - 씬 패널 관리, 변경 (한번에 한 개의 패널만 존재)
+  - Scene Panel의 관리, 변경 (한번에 한 개의 패널만 존재)
   - 입력 필드를 읽어 서버 생성 혹은 네트워크 연결
 - Common Button Script
   - Scene 변경
@@ -113,7 +113,6 @@
     - 서버가 연결될 당시 종료함수를 delegate에 연결함
     - NetworkLobbyManager.StopHost(), StopClient() 중 하나 연결
   - UIChangeTo 함수로 MainPanel로 변경
-
 <br>
 
 ## 세부 구현 내용

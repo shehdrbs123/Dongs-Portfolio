@@ -39,10 +39,10 @@
   - 각 버튼 OnClick 이벤트에 Connect Scene Button script 내 함수 등록
   - Panel변경시 한 개의 Panel만 뜨도록 설계
   - HostButton
-    - ConnectSceneButtonScript.OnClickHostInHCSelect() 연결됨
+    - ConnectSceneButtonScript.OnClickToHostPanel() 연결됨
     - UIChangeTo 함수로 Host Panel로 변경
   - ConnectButton
-    - ConnectSceneButtonScript.OnClickHostInHCSelect() 연결됨
+    - ConnectSceneButtonScript OnClickToConnectionPanel() 연결됨
     - UIChangeTo 함수로 Client Panel로 변경
 - Scene 변경
   - ExitButton : Main Scene으로 변경 요청
@@ -62,12 +62,12 @@
 
  ## 구현 내용 
  - CreateButton
-   - ConnectSceneButtonScript.OnClickCreateInHost() 연결됨
+   - ConnectSceneButtonScript.OnClickCreateHost() 연결됨
    - NetworkLobbyManager로 InputField의 Port 입력값을 전달
-   - StartHost()로 호스트 서버 생성
+   - NetworkLobbyManager.StartHost()로 호스트 서버 생성
    - 호스트 서버 생성 확인 후 waitroom Panel 변경
  - ExitButton
-   - ConnectSceneButtonScript.OnClickCreateInHost() 연결됨
+   - ConnectSceneButtonScript. 연결됨
    - UIChangeTo 함수로 MainPanel로 변경
 
 
@@ -88,7 +88,7 @@
    - StartClient()로 호스트 서버 생성
    - 호스트 서버 생성 확인 후 waitroom Panel 변경
  - ExitButton
-   - ConnectSceneButtonScript.OnClickCreateInHost() 연결됨
+   - ConnectSceneButtonScript.OnClickExitToMain()연결됨
    - UIChangeTo 함수로 MainPanel로 변경
 
 ## [위로가기](#connect-scenelobby)
@@ -97,36 +97,53 @@
 
 ## Connect Scene Waitroom Panel
 
-
-
-<table>
-  <tr align=center>
-    <td><H3><b>실제화면</b></H3></</td>
-    <td><H3><b>네트워크의 접속, Waitroom Panel 전환 요청 이후 setting 과정</b></H3></td>
-  </tr>
-  <tr align=center >
-    <td><img src=" ../_Image/Connect%20Scene%20Waitroom.png"></td>
-    <td colspan=><img src=" ../_Image/Waitroom%20%EC%A0%91%EC%86%8D%20%ED%9B%84%20%EC%84%A4%EC%A0%95%EA%B3%BC%EC%A0%95.png"></td>
-  </tr>
-  <tr align=center>
-    <td colspan="2"><H3><b>Ready 후 Text(Ready) 변경 과정</b></H3></td>
-  </tr>
-  <tr align=center>
-    <td colspan="2"><img src="../_Image/Waitroom%20Ready%20후%20Text%20변경과정.png"></td>
-  </tr>
-  <tr align=center>
-    <td colspan="2"><H3><b>Button 구현 도식도</b></H3></td>
-  </tr>
-  <tr align=center>
-    <td colspan="2"><img src="../_Image/Waitroom%20Button%20설계%20내용.png"></td>
-  </tr>
-
-</table>
+|<H3><b>실제화면</b></H3>|<H3><b>Button 구현 도식도</b></H3>|
+|:---:|:---:|
+|![미리보기](../_Image/waitroom%20client%20%EC%A0%91%EC%86%8D%2C%20%EB%8F%99%EA%B8%B0%ED%99%94.png)|![미리보기](../_Image/Waitroom%20Button%20%EA%B0%84%EB%8B%A8%20%EB%82%B4%EC%9A%A9.png)|
 
 ## 구현 내용
+- ReadyButton Event는 NetworkLobbyPlayer 생성 시 등록
+  - 로컬플레이어의 Ready상태를 변경해야하므로 동적 생성
+  - LobbyPlayer.OnReadyClicked()를 연결
+  - LobbyPlayer.SendReadyToBeginMessage(), SendNotReadyToBeginMeesage()로 Ready 상태 서버에 전달
+  - 서버는 레디한 클라이언트 수를 확인해 자동으로 InGameScene 자동 전환
+- ExitButton
+  - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
+  - 서버 연결 종료 delegate callback함수 실행
+    - 서버가 연결될 당시 종료함수를 delegate에 연결함
+    - NetworkLobbyManager.StopHost(), StopClient() 중 하나 연결
+  - UIChangeTo 함수로 MainPanel로 변경
+
+<br>
+
+## 세부 구현 내용
+
+|<H3><b>네트워크 접속 요청 후 처리과정</b></H3>|
+|:---:|
+|![이미지](../_Image/Waitroom%20%EC%A0%91%EC%86%8D%20%ED%9B%84%20%EC%84%A4%EC%A0%95%EA%B3%BC%EC%A0%95.png)|
 - Waitroom Panel Setting 과정
   -  NetworkLobbyManager가 네트워크에 연결되면, 자동적으로 LobbyPlayer를 생성
   -  LobbyPlayer의 OnClientEnterLobby()이벤트 발생
+  -  LobbyPlayer는 LobbyPlayerList에 등록요청 및 Text 컴포넌트를 받아옴
+     -  LobbyPlayerList
+        -  LobbyPlayer의 UI를 총괄하는 스크립트
+        -  UI내 Player 정보가 적히는 오브젝트의 부모에 추가
+        -  각 LobbyPlayer의 UI상 위치를 지정해줌
+  -  NetworkLobbyManager에 등록된 자신의 이름 확인
+  -  받아온 Text Component에 자신의 이름과 현재 Ready상태를 입력
+  -  서버에 접속된 순서대로 LobbyPlayer가 생성/반복됨
+
+
+|<H3><b>Ready 후 Text(Ready) 변경 과정</b></H3>|
+|:---:|
+|![이미지](../_Image/Waitroom%20Ready%20후%20Text%20변경과정.png)|
+-  Button 추가 설명
+   - ReadyButton
+     - LobbyPlayer내에 LocalPlayer임을 알려주는 플래그 존재, 해당 여부로 버튼 이벤트 등록을 결정
+     - 이후 ReadyButton을 누르면 연결된 LobbyPlayer.OnReadyClicked()가 실행 
+       - SendReadyToBeginMessage() or SendNotReadyToBeginMessage()으로 네트워크가 Ready값 전달
+       - OnClientReady() 이벤트가 발생, 네트워크 내 값을 일치화 시킴
+
 
 ## [위로가기](#connect-scenelobby)
 

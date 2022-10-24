@@ -1,112 +1,82 @@
-# UI, Scene Design
+## Ingame Scene(Lobby)
+<br>
 
 ## 개요
- - UI, Scene 구현에 관한 문서입니다.
-<br>
+
+
+  
 <br>
 
 ## 바로가기
- - [Main Scene](#main-scene)
- - [Connect Scene](connect-scene(lobby))
- - [Ingame Scene](#main-scene)
-<br>
-<br>
+### Ingame Scene
+ - [MoveButton]()
+ - [Gauge]()
+ - [Top Indicate Button]()
+ - [Pause Panel]()
 
----
-<br>
 
-## Main Scene
-<br>
 
- ![미리보기](_Image/main%20Scene.png)
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
 
 <br>
 
-## 구현 내용
+## MoveButton
 
-  ![미리보기](_Image/MainScene%20%EC%84%A4%EA%B3%84%20%EB%82%B4%EC%9A%A9.png)
+ |<H3><b>실제화면</b></H3>| <H3><b>Button 구현 도식도</b></H3>|
+ |:---:|:---:|
+ |![미리보기](../_Image/Ingame%20Scene%20Move%20Button.png)|![미리보기](../_Image/Connect%20Scene%20MainPanel%20%EC%84%A4%EA%B3%84%20%EB%82%B4%EC%9A%A9.png)|
 
-  - CommonButtonScript를 최상위 UI 오브젝트에 추가
-  - Unity GUI Button의 Hierachy 내 Button 컴포넌트의 OnClick 이벤트에 common button Script 함수 연결
-  - Start Button 
-    - CommonButtonScript 내 씬 이동 함수로 Connect Scene(다음씬)으로 이동
-  - Exit Button
-    - CommonButtonScript 내 종료함수로 게임 종료
+## 구현내용 
+- MoveButton
+  - 보이지 않는 양쪽의 버튼이 존재
+  - 왼쪽버튼을 누르면 왼쪽으로 이동, 오른쪽 버튼을 누르면 오른쪽 이동
+  - 접속 시 컨트롤 가능 플레이어 선택을 위해 내부적으로 Player를 보관
+  - Ingame Scene으로 전환되며 GamePlayer가 생성,
+  - GamePlayer로 부터 로컬플레이어라면 버튼에 Player가 연결된다.
+  
 
 
+## [위로가기](#ingame-scenelobby)
 
-
----
 <br>
 
-## Connect Scene(Lobby)
-<br>
+## Gauge
 
-### Panel Flow Chart
+ |<H3><b>실제화면</b></H3>| <H3><b>Button 구현 도식도</b></H3>|
+ |:---:|:---:|
+ |![미리보기](../_Image/Ingame%20-%20Pause.png)||
 
-![미리보기](_Image/Connect%20Scene%20UIFlowChart.png) 
 
 ## 구현내용
-- Scene 변경
-  - Connect -> Main : CommonButtonScript switchScene 함수로 씬변경
-- Panel 변경
-  - Connect Scene Button Script의 UIChangeTo 함수로 변경
-- Connect Scene Button Script는 UI 최상단 오브젝트 컴포넌트로 등록
-- 각 버튼 OnClick 이벤트에 Connect Scene Button script 내 함수 등록
-- Panel변경시 한 개의 Panel만 뜨도록 설계
+- ㅇㅇㅇ
+  
+## [위로가기](#ingame-scenelobby)
 
 <br>
-<br>
 
-## Connect Scene Main
+## Top Indicate Button
 
-
- ![미리보기](_Image/Connect%20Scene%20Main.png)
-
-
-## 구현내용 
-
- ![미리보기](_Image/Connect%20Scene%20MainPanel%20%EC%84%A4%EA%B3%84%20%EB%82%B4%EC%9A%A9.png)
+ |<H3><b>실제화면</b></H3>| <H3><b>Button 구현 도식도</b></H3>|
+ |:---:|:---:|
+ |![미리보기](../_Image/Ingame%20-%20Pause.png)||
 
 
-<br>
-<br>
-
-## Connect Scene Host Panel
-
-
- ![미리보기](_Image/Connect%20Scene%20Host.png)
- 
- 
-## 구현내용 
-
- ![미리보기](_Image/Connect%20Scene%20MainPanel%20%EC%84%A4%EA%B3%84%20%EB%82%B4%EC%9A%A9.png)
-
+## 구현내용
+- ㅇㅇㅇ
+## [위로가기](#ingame-scenelobby)
 
 <br>
+
+## Pause Panel
+
+ |<H3><b>실제화면</b></H3>| <H3><b>Button 구현 도식도</b></H3>|
+ |:---:|:---:|
+ |![미리보기](../_Image/Ingame%20-%20Pause.png)||
+
+## 구현내용
+- ㅇㅇㅇ
+## [위로가기](#ingame-scenelobby)
+
 <br>
 
-## Connect Scene Client Panel
-
-
- ![미리보기](_Image/Connect%20Scene%20Client.png)
-
-## Connect Scene Waitroom Panel
-
-
- ![미리보기](_Image/Connect%20Scene%20Waitroom.png)
-
- 
-<br>
-<br>
-
----
-
-## Ingame Scene
-
-## Ingame
- ![미리보기](_Image/Ingame%20Scene.png)
-
- ## Ingame - Pause Panel
- ![미리보기](_Image/Ingame%20-%20Pause.png)
-
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)

@@ -14,14 +14,7 @@
 ## Spawner
   ![미리보기](_Image/Spawner.gif)
 
-- <H2>구현 내용 </H2>
- 
-  - 일정시간마다 특정 적 오브젝트를 Spawn한다.
-  
-<br>
-
-- <span style="font-size:150%"> 구현 세부 </span>
-  
+## 구현 내용 
   - Game이 시작되면 TableSetter로부터 Spawner 자신이 생성 
   - 생성 시
     - Spawner의 Hierarchy에 등록된 적 오브젝트의 수 만큼 SpawnCoroutine을 생성/코루틴 실행

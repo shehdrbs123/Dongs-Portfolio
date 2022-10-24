@@ -19,9 +19,10 @@
 
 ## 바로가기
 ### Connect Scene
- - [주로 사용한 Components](#주로-사용한-componenets-설명)
+ - [주로 사용한 Components](#주로-사용한-componenets-간단설명)
  - [NetworkLobbyManager](#networklobbymanager-1)
  - [LobbyPlayer, GamePlayer](#lobbyplayer-gameplayer)
+ - [TableSetter](#)
  - [command, SyncVars]
 
 
@@ -33,20 +34,23 @@
 
 ## NetworkComponents
 
+<center>
+
  |<H3><b>Network Components 구조도</b></H3>|
  |:---:|
  |![미리보기](_Image/Network%20소개%20이미지.png)|
 
-## 주로 사용한 Componenets 설명
+</center>
+
+## 주로 사용한 Componenets 간단설명
 
 ### NetworkLobbyManager
   - 대기방이 있는 멀티네트워크 구조에서 쓰이는 Unet의 컴포넌트 중 하나
-  - Networking 연결, 연결 시 작동하는 추상 메서드 존재
+  - Networking 연결, 연결 시 작동하는 이벤트 가상 함수 존재
   - NetworkLobbyPlayer, GamePlayer 두 객체를 사용 
     - 로비상황에서는 LobbyPlayer 
     - Game상황에서는 GamePlayer
     - OnLobbyServerSceneLoadedForPlayer() 에서 오브젝트 간 데이터를 공유
-      - 모든 Player가 Ready가 되면 실행되는 이벤트 메서드
 
 ### NetworkBehaviour
   - Network Identity 컴포넌트 필수
@@ -59,10 +63,11 @@
 
 ### NetworkLobbyPlayer
   - 유저 접속 시 NetworkLobbyManager의해 자동생성되는 네트워크 플레이어 단위
-  - UI와의 연동을 위해 OnClientEnterLobby(), OnClientExitLobby(), OnClientReady(bool readyState)를 사용함
+  - OnClientEnterLobby(), OnClientExitLobby(), OnClientReady(bool readyState)의 가상함수를 
+   <br>재구현 하여 사용
 
 ### NetworkClient
-  - Client To Server 로의 네트워크 연결 관리 
+  - Client To Server 로의 네트워크 연결 관리, 확인
   - Client<-> Server 간에 메시지를 송수신 가능
 
 ### NetworkServer
@@ -94,12 +99,12 @@
     - 컴포넌트에 등록된 LobbyScene-> GameScene 이동이 확인 될 경우 발생하는 이벤트
     - LobbyPlayer-> GamePlayer의 데이터 이동에 사용
     - 이름과 슬롯 위치를 공유
-- 싱글턴 패턴으로 사용 필요한 위치에서 기능 사용 or 데이터를 읽기 전용으로 사용
-  - ConnectScene에서 UI 연결
+- 싱글턴 패턴으로 사용 필요한 위치에서 기능 or 데이터(읽기전용) 사용
+  - ConnectScene에서 UI(Panel) 연결
   - 버튼 입력 시 접속요청
-  - 이름 보유
+  - 이름 공유
   - 접속 종료 요청
-  - 연결여부 확인
+  - 네트워크 연결 여부 확인
 
 ## [위로가기](#네트워킹)
 
@@ -108,25 +113,46 @@
 ## LobbyPlayer, GamePlayer
 
 |<H3><b>LobbyPlayer WorkFlow</b></H3>|
- |:---:|
- |![미리보기](_Image/NetworkLobbyManager%20%EC%B6%94%EA%B0%80%ED%95%9C%20%EA%B8%B0%EB%8A%A5.png)|
+|:---:|
+|![미리보기](_Image/NetworkLobbyPlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D%EB%8F%84.png)|
+
+|<H3><b>GamePlayer WorkFlow</b></H3>|
+|:---:|
+|![미리보기](_Image/Network%20GamePlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D.png)|
 
 
 ## 구현 내용
 - NetworkLobbyPlayer
   - NetworkLobbyManager와 짝꿍이 되어 사용
   - 외부의 접속이 확인되면(호스트 포함) NetworkLobbyManager에서 LobbyPlayer를 생성
-  - 
+  - LobbyPlayer는 생성과 동시에 OnClientEnterLobby() 이벤트 실행
+  - LobbyPlayerList에 등록, List로 부터 PlayerInfo slot을 지정받음
+  - 추가로 지정된 위치의 Text component의 text를 변경, 이름, Ready 상태 등록
+  - [SyncVar] 속성으로 어느 클라이언트 든 데이터변경 발생 시 서버에서 동기화 요청을 수행
 
 
-- 네트워킹 트릭
-  ![이미지](_Image/Network%20field%20설정%20트릭.png)
-  - 게임플레이는 실제 모든 네트워킹 공간에서 자신이 지정된 위치에서만 활동 가능
-  - 본래 기획에서는 다양한 스킬 등을 활용해 위치를 넘나드는 구조였으나 싶었으나 기간의 부족으로 구현 x
-  - GamePlayer는 전달받은 슬롯 위치를 이용해 카메라와 위치를 지정하여 사용하게됨
+- GamePlayer
+  - NetworkLobbyManager가 Ingame에 진입 시 자동으로 생성하는 Playable Object
+  - LocalUser의 경우 Camera, MoveButton, HP Gauge의 컴포넌트 정보를 찾아 보유
+  - OtherUser의 경우 UserUI의 정보를 찾아 보유
+    - GamePlayer의 데이터가 변동하게되면 각 UI에 변동정보를 반영
+    - [SyncVar] 속성으로 데이터 동기화 같이 수행
 
 ## [위로가기](#네트워킹)
 
 <br>
+
+## TableSetter
+
+- 네트워킹 트릭<br>
+![이미지](_Image/Network%20field%20설정%20트릭.png)
+  - 게임플레이는 실제 모든 네트워킹 공간에서 자신이 지정된 위치에서만 활동 가능
+  - 본래 기획에서는 다양한 스킬 등을 활용해 위치를 넘나드는 구조였으나 싶었으나 기간의 부족으로 구현 x
+  - GamePlayer는 전달받은 슬롯 위치를 이용해 카메라와 위치를 지정하여 사용하게됨
+
+## 구현 내용
+  - 위 이미지에서의 TableSetting을 맡은 클래스
+
+## [위로가기](#네트워킹)
 
 ## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)

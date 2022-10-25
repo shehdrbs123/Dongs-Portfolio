@@ -19,7 +19,7 @@
 
 ## 바로가기
 ### Connect Scene
- - [주로 사용한 Components](#주로-사용한-componenets-간단설명)
+ - [주로 사용한 Components 간단설명](#주로-사용한-componenets-간단설명)
  - [NetworkLobbyManager](#networklobbymanager-1)
  - [LobbyPlayer, GamePlayer](#lobbyplayer-gameplayer)
  - [TableSetter](#)
@@ -46,8 +46,8 @@
 
 ### NetworkLobbyManager
   - 대기방이 있는 멀티네트워크 구조에서 쓰이는 Unet의 컴포넌트 중 하나
-  - Networking 연결, 연결 시 작동하는 이벤트 가상 함수 존재
-  - NetworkLobbyPlayer, GamePlayer 두 객체를 사용 
+  - Networking 연결, 연결 시 작동하는 이벤트 가상 함수로 게임 Network 동기화 수행
+  - NetworkLobbyPlayer, GamePlayer 두 객체를 Player 객체로 사용 
     - 로비상황에서는 LobbyPlayer 
     - Game상황에서는 GamePlayer
     - OnLobbyServerSceneLoadedForPlayer() 에서 오브젝트 간 데이터를 공유
@@ -55,7 +55,7 @@
 ### NetworkBehaviour
   - Network Identity 컴포넌트 필수
   - 커스텀 컴포넌트를 생성할 때 사용
-  - Commands, ClientRPCs, SyncEvents, SyncVars 의 기능을 통해 변수를 동기화
+  - Commands, ClientRPCs, SyncEvents, SyncVars 의 기능 사용을 통해 변수를 동기화
 
 ### NetworkIdentity
   - 네트워크 상에서 유니크한 존재로 표시해주는 컴포넌트
@@ -89,18 +89,20 @@
  |![미리보기](_Image/NetworkLobbyManager%20%EC%B6%94%EA%B0%80%ED%95%9C%20%EA%B8%B0%EB%8A%A5.png)|
 
 ## 구현 내용
-- NetworkLobbyManager는 Lobby에 필요한 기능 외에도 접속과 관련한 이벤트 가상함수가 존재
-  - OnLobbyServerSceneChanged
-    - Scene이 변경되었을 때 발생하는 이벤트
-    - 해당 가상함수를 override, Connect Scene에서의 Panel 선택에 사용,
-      - 서버가 켜져있을 경우 waitroom panel 선택, 아닐경우 ConnectScene Main
-      - 해당 기능을 위해 Connect Scene 전환 시 연결설정
-  - OnLobbyServerSceneChangedForPlayer(LobbyPlayer, GamePlayer)
-    - 컴포넌트에 등록된 LobbyScene-> GameScene 이동이 확인 될 경우 발생하는 이벤트
-    - LobbyPlayer-> GamePlayer의 데이터 이동에 사용
-    - 이름과 슬롯 위치를 공유
+- 네트워크 연결이나 연결 시의 가상함수를 구현하여 네트워크와 관련된 기능을 사용하는 컴포넌트
+- NetworkLobbyManager는 NetworkManager의 기능을 확장한 오브젝트로 Lobby의 기능도 포함
+  - NetworkManager에서의 StartHost(), StartClient() 와 같은 네트워크 연결 함수 지원.
+  - 접속과 관련한 이벤트 가상함수
+    - OnLobbyServerSceneChanged
+      - Scene이 변경되었을 때 발생하는 이벤트
+      - 본 게임에서는 Connect Scene에서의 Panel 선택에 사용
+        - 서버가 켜져있을 경우 waitroom panel 선택, 아닐경우 ConnectScene Main
+    - OnLobbyServerSceneChangedForPlayer(LobbyPlayer, GamePlayer)
+      - 컴포넌트에 등록된 LobbyScene-> GameScene 이동이 확인 될 경우 발생하는 이벤트
+      - LobbyPlayer-> GamePlayer의 데이터 이동에 사용
+      - 이름과 슬롯 위치를 공유
 - 싱글턴 패턴으로 사용 필요한 위치에서 기능 or 데이터(읽기전용) 사용
-  - ConnectScene에서 UI(Panel) 연결
+  - ConnectScene에서 NetworkLobbyManager에 UI(Panel) 연결
   - 버튼 입력 시 접속요청
   - 이름 공유
   - 접속 종료 요청
@@ -123,6 +125,7 @@
 
 ## 구현 내용
 - NetworkLobbyPlayer
+  - 플레이어가 접속했을 때 로비에서 플레이어 정보를 가지고 있는 오브젝트
   - NetworkLobbyManager와 짝꿍이 되어 사용
   - 외부의 접속이 확인되면(호스트 포함) NetworkLobbyManager에서 LobbyPlayer를 생성
   - LobbyPlayer는 생성과 동시에 OnClientEnterLobby() 이벤트 실행
@@ -133,6 +136,7 @@
 
 - GamePlayer
   - NetworkLobbyManager가 Ingame에 진입 시 자동으로 생성하는 Playable Object
+  - 유저가 직접 플레이할 Prefab을 등록
   - LocalUser의 경우 Camera, MoveButton, HP Gauge의 컴포넌트 정보를 찾아 보유
   - OtherUser의 경우 UserUI의 정보를 찾아 보유
     - GamePlayer의 데이터가 변동하게되면 각 UI에 변동정보를 반영

@@ -13,7 +13,7 @@
  
 <br>
 
-## Scene Flow Chart
+## UI Flow Chart
  ![미리보기](_Image/Scene%20Flow%20Chart.png)
 
 <br>

@@ -67,7 +67,7 @@
    - NetworkLobbyManager.StartHost()로 호스트 서버 생성
    - 호스트 서버 생성 확인 후 waitroom Panel 변경
  - ExitButton
-   - ConnectSceneButtonScript. 연결됨
+   - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
    - UIChangeTo 함수로 MainPanel로 변경
 
 
@@ -102,11 +102,11 @@
 |![미리보기](../_Image/waitroom%20client%20%EC%A0%91%EC%86%8D%2C%20%EB%8F%99%EA%B8%B0%ED%99%94.png)|![미리보기](../_Image/Waitroom%20Button%20%EA%B0%84%EB%8B%A8%20%EB%82%B4%EC%9A%A9.png)|
 
 ## 구현 내용
-- ReadyButton Event는 NetworkLobbyPlayer 생성 시 등록
-  - 로컬플레이어의 Ready상태를 변경해야하므로 동적 생성
+- ReadyButton OnClick 이벤트는 NetworkLobbyPlayer 생성 시 등록
+  - 로컬플레이어의 Ready상태를 변경해야하므로 동적 연결
   - LobbyPlayer.OnReadyClicked()를 연결
   - LobbyPlayer.SendReadyToBeginMessage(), SendNotReadyToBeginMeesage()로 Ready 상태 서버에 전달
-  - 서버는 레디한 클라이언트 수를 확인해 자동으로 InGameScene 자동 전환
+  - 서버는 Ready한 클라이언트 수를 확인해 자동으로 InGameScene 자동 전환
 - ExitButton
   - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
   - 서버 연결 종료 delegate callback함수 실행
@@ -140,7 +140,7 @@
    - ReadyButton
      - LobbyPlayer내에 LocalPlayer임을 알려주는 플래그 존재, 해당 여부로 버튼 이벤트 등록을 결정
      - 이후 ReadyButton을 누르면 연결된 LobbyPlayer.OnReadyClicked()가 실행 
-       - SendReadyToBeginMessage() or SendNotReadyToBeginMessage()으로 네트워크가 Ready값 전달
+       - SendReadyToBeginMessage() or SendNotReadyToBeginMessage()으로 서버에 Ready값 전달
        - OnClientReady() 이벤트가 발생, 네트워크 내 값을 일치화 시킴
 
 

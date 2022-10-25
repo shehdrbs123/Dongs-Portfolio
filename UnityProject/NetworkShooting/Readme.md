@@ -29,8 +29,8 @@
   - 보스 1기 ( 4개의 패턴 )
   
 ## 개발 세부
- - [네트워킹](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Networking)
  - [UI / Scene](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
+ - [네트워킹](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Networking)
  - [Player](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Player)
  - [Monster](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Monster)
 

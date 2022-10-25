@@ -33,7 +33,7 @@
  - [네트워킹](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Networking)
  - [Player](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Player)
  - [Monster](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Monster)
- - [포트폴리오 영상](https://www.youtube.com/watch?v=N0r92dzhtAY)
+ - [포트폴리오 영상](https://youtu.be/9qI8dbMiV2M)
 
 ## 성과
 - 시스템 구조에 다양한 디자인 패턴을 적용 / 구현

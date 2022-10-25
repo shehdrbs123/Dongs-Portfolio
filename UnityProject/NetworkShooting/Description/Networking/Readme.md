@@ -70,11 +70,12 @@
   - Client<-> Server 간에 메시지를 송수신 가능
 
 ### NetworkServer
+  - 주로 NetworkServer임을 확인하거나 네트워크 내 오브젝트를 Spawn할 때 사용
   - 서버의 작동상태를 확인을 통해 서버 내에서만 실행될 명령을 제한 가능
   - 클라이언트의 연결을 관리, 스폰, 게임의 전반적인 플레이 진행에 이용
 
 ### NetworkTransform
-  - 네트워크 상 오브젝트 중 위치값을 공유하게 해주는 컴포넌트
+  - 네트워크 상 오브젝트 위치값을 공유하게 해주는 컴포넌트
   - Threshold, sendrate 등 네트워크 전송 부하에 관한 설정이 가능
 
 
@@ -148,20 +149,24 @@
 
 ## TableSetter
 
-|<H3><b>GamePlayer WorkFlow</b></H3>|
+|<H3><b>TableSetter WorkFlow</b></H3>|
 |:---:|
-|![미리보기](_Image/Network%20GamePlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D.png)|
+|![미리보기](_Image/Network%20TableSetter.png)|
 
 
 ## 구현 내용
 - 이름 그대로 IngameScene에서 게임환경을 구성해주는 오브젝트
-- TableSetter는 IngameScene 진입 시 네트워크 유저 수에 따라 아래 이미지에 맞추어 Spanwer와 Boundary를 설정함
+- TableSetter는 IngameScene 진입 시 네트워크 유저 수에 따라 아래 이미지에 맞추어 Spanwer와 Boundary를 Spawn함
+- Spawn 과정
+  - 먼저 서버에서 오브젝트를 Instantiate 시킨다.
+  - NetworkServer.Spawn(Instantiate 시킨 인스턴스)로 네트워크에 공유한다.
 - 네트워킹 트릭<br>
 ![이미지](_Image/Network%20field%20설정%20트릭.png)
   - 게임플레이는 실제 모든 네트워킹 공간에서 자신이 지정된 위치에서만 활동 가능
   - 본래 기획에서는 다양한 스킬 등을 활용해 위치를 넘나드는 구조였으나 싶었으나 기간의 부족으로 구현 x
   - GamePlayer는 전달받은 슬롯 위치를 이용해 카메라와 위치를 지정하여 사용하게됨
 - 고정위치로 지정되어 슬롯넘버 * slot * 15로 default 위치가 지정됨.
+
 
 ## [위로가기](#네트워킹)
 

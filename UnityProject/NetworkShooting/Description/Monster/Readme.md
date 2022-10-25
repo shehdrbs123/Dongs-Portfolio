@@ -1,13 +1,16 @@
 # Enemy
-## 개요\
+## 개요
 
 <center>
+
 |<H3><b>EnemyObject Class 상속 구조도</b></H3>|
 |:---:|
 |![미리보기]()|
+
+다음은 모든 EnemyObject의 설명 문서입니다.
+ 
 </center>
 
-- 다음은 모든 EnemyObject의 설명 문서입니다.
 ## 바로가기
 
   - [Spawner](#spawner)

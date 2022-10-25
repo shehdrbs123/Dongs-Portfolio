@@ -1,5 +1,13 @@
 # Enemy
+## 개요\
 
+<center>
+|<H3><b>EnemyObject Class 상속 구조도</b></H3>|
+|:---:|
+|![미리보기]()|
+</center>
+
+- 다음은 모든 EnemyObject의 설명 문서입니다.
 ## 바로가기
 
   - [Spawner](#spawner)
@@ -7,12 +15,17 @@
   - [적2](#적2)
   - [Boss](#boss)
 
+## [위로가기](#Enemy)
 
----
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
+
 <br>
 
 ## Spawner
-  ![미리보기](_Image/Spawner.gif)
+
+|<H3><b>Spanwer Enemy Spawn 모습</b></H3>|
+|:---:|
+|![미리보기](_Image/Spawner.gif)|
 
 ## 구현 내용 
   - Game이 시작되면 TableSetter로부터 Spawner 자신이 생성 
@@ -24,13 +37,15 @@
   - 게임 상단 랜덤한 위치에서 적 오브젝트를 생성(NetworkServer.Spawn)
   - 적 오브젝트 Rigidbody2d.veloicity를 지정
 
-<br>
+## [위로가기](#Enemy)
 
----
 <br>
 
 ## 적1
-  ![미리보기](_Image/적1.gif)
+
+|<H3><b>적1의 이동과 shooting 모습</b></H3>|
+|:---:|
+|![미리보기](_Image/적1.gif)|
 
 - <H2>구현 내용 </H2>
  
@@ -44,16 +59,16 @@
   - y방향의 움직임은 Rigidbody.velocity의 변경, 마찰력없음으로 반영됨
   - Update 함수에서 쿨타임을 체크
   - 쿨타임보다 기다린시간이 크다면
-  - bullet을 NetworkServer.Spawn을 통해 생성 (<span style="font-size:80%">[문서링크]() </span>)
+  - bullet을 NetworkServer.Spawn을 통해 생성
   - bullet에 velocity를 부여하여 발사.
 
-<br>
-
----
+## [위로가기](#Enemy)
 <br>
 
 ## 적2
-![미리보기](_Image/적2.gif)
+|<H3><b>적2의 이동과 shooting 모습</b></H3>|
+|:---:|
+|![미리보기](_Image/적2.gif)|
 
 - <H2>구현 내용 </H2>
  
@@ -65,20 +80,20 @@
   - y방향의 움직임은 Rigidbody.velocity의 변경, 마찰력없음으로 반영됨
   - Update 함수에서 쿨타임을 체크
   - 쿨타임보다 기다린시간이 크다면
-  - bullet을 NetworkServer.Spawn을 통해 생성 <span style="font-size:80%">[문서링크(NetworkServer)]() </span>
+  - bullet을 NetworkServer.Spawn을 통해 생성
   - bullet에 Player의 위치로 방향을 지정, 회전
-    - Player의 위치는 Environment의 Boundary 참조 <span style="font-size:80%">[문서링크(boundary)](../Environment/Readme.md) </span>
+    - Player의 위치는 Environment의 Boundary 참조
   - velocity를 부여하여 일정 간격으로 3발 발사.
     
-<br>
+## [위로가기](#Enemy)
 
----
 <br>
 
 ## Boss
-
-![미리보기](_Image/Boss등장.gif)<br>
-![미리보기](_Image/Boss_Pattern.gif)
+|<H3><b>보스의 등장과 패턴 모습</b></H3>|
+|:---:|
+|![미리보기](_Image/Boss등장.gif)|
+|![미리보기](_Image/Boss_Pattern.gif)|
 
 - <H2>구현 내용 </H2>
  
@@ -115,3 +130,7 @@
       - 유저위치로 총알 방향 지정
       - 양쪽 발사위치에서 동시에 여러발 발사(10번)
   - boss 체력 동기화
+## [위로가기](#Enemy)
+<br>
+
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)

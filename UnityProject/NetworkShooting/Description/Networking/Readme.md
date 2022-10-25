@@ -22,8 +22,7 @@
  - [주로 사용한 Components 간단설명](#주로-사용한-componenets-간단설명)
  - [NetworkLobbyManager](#networklobbymanager-1)
  - [LobbyPlayer, GamePlayer](#lobbyplayer-gameplayer)
- - [TableSetter](#)
- - [command, SyncVars]
+ - [TableSetter](#tablesetter)
 
 
 <br>
@@ -101,6 +100,7 @@
       - 컴포넌트에 등록된 LobbyScene-> GameScene 이동이 확인 될 경우 발생하는 이벤트
       - LobbyPlayer-> GamePlayer의 데이터 이동에 사용
       - 이름과 슬롯 위치를 공유
+
 - 싱글턴 패턴으로 사용 필요한 위치에서 기능 or 데이터(읽기전용) 사용
   - ConnectScene에서 NetworkLobbyManager에 UI(Panel) 연결
   - 버튼 입력 시 접속요청
@@ -148,14 +148,20 @@
 
 ## TableSetter
 
+|<H3><b>GamePlayer WorkFlow</b></H3>|
+|:---:|
+|![미리보기](_Image/Network%20GamePlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D.png)|
+
+
+## 구현 내용
+- 이름 그대로 IngameScene에서 게임환경을 구성해주는 오브젝트
+- TableSetter는 IngameScene 진입 시 네트워크 유저 수에 따라 아래 이미지에 맞추어 Spanwer와 Boundary를 설정함
 - 네트워킹 트릭<br>
 ![이미지](_Image/Network%20field%20설정%20트릭.png)
   - 게임플레이는 실제 모든 네트워킹 공간에서 자신이 지정된 위치에서만 활동 가능
   - 본래 기획에서는 다양한 스킬 등을 활용해 위치를 넘나드는 구조였으나 싶었으나 기간의 부족으로 구현 x
   - GamePlayer는 전달받은 슬롯 위치를 이용해 카메라와 위치를 지정하여 사용하게됨
-
-## 구현 내용
-  - 위 이미지에서의 TableSetting을 맡은 클래스
+- 고정위치로 지정되어 슬롯넘버 * slot * 15로 default 위치가 지정됨.
 
 ## [위로가기](#네트워킹)
 

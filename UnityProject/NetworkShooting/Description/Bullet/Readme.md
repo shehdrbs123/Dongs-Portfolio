@@ -40,7 +40,7 @@
 - GameObject의 tag를 확인하여 플레이어를 구분
 - MoveObject.hitDamage() 데미지 전달 후 Network.Unspawn()을 수행
 
-## [위로가기](#네트워킹)
+## [위로가기](#bullet)
 
 <br>
 
@@ -58,7 +58,7 @@
 - 기본적인 구현 구조는 적 bullet과 같다
 - 태그 확인 시 Enemy인지를 확인한다
 
-## [위로가기](#네트워킹)
+## [위로가기](#bullet)
 
 <br>
 
@@ -78,7 +78,7 @@
 - 일정 시간 이후 NetworkServer.Unspawn()
 - 보유하고 있는 파편 Prefabs를 Instatiate() 후 NetworkServer.Spawn() 됨
 
-## [위로가기](#네트워킹)
+## [위로가기](#bullet)
 
 <br>
 

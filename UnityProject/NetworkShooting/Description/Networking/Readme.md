@@ -18,7 +18,7 @@
 <br>
 
 ## 바로가기
-### Connect Scene
+
  - [주로 사용한 Components 간단설명](#주로-사용한-componenets-간단설명)
  - [NetworkLobbyManager](#networklobbymanager-1)
  - [LobbyPlayer, GamePlayer](#lobbyplayer-gameplayer)

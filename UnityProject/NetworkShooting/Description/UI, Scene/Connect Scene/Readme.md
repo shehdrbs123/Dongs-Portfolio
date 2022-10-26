@@ -16,7 +16,6 @@
 <br>
 
 ## 바로가기
-### Connect Scene
  - [Main Panel](#connect-scene-main)
  - [Host Panel](#connect-scene-host-panel)
  - [Client Panel](#connect-scene-client-panel)

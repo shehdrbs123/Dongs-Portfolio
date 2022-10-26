@@ -5,7 +5,7 @@
 
 
 ## Bullet 상속 구조
-![이미지]()
+![이미지](_Image/weapon%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EA%B5%AC%EC%A1%B0.png)
 
 
 </center>
@@ -13,7 +13,7 @@
 <br>
 
 ## 바로가기
-### Connect Scene
+
  - [기본 총알](#기본-bullet)
  - [유저 총알](#유저-bullet)
  - [Boss Bomb](#보스-Bomb)

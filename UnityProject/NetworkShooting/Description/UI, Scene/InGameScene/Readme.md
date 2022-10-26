@@ -12,7 +12,6 @@
   - 구현 클래스의 버튼기능은 OnPointerDown, OnPointerUp 에구현되어있음
 
 ## 바로가기
-### Ingame Scene
  - [MoveButton](#movebutton)
  - [Gauge](#gauge)
  - [UserUI Button](#userui-button)
@@ -53,7 +52,7 @@
   - Local gamePlayer와 연동, HP Data에 따라 자동으로 데이터가 반영됨
   - 두 개의 이미지를 두고 한 개의 이미지 RectTransform.sizeDelta 값을 줄이는 방식으로 동작 
 - Boss Warning Gauge
-  - 네트워크 상 모든 EnemyObject가 파괴 될 때 수치가 상승 (<span style="color:#dd6666">빨간색</span> 바로 표시됨)
+  - 네트워크 상 모든 EnemyObject가 파괴 될 때 수치가 상승 (<span style="color:#dd6666">빨간색</span>Bar로 표시됨)
   - TableSetter에서 Crisis Gauge 값과 UI를 관리, 해당 값을 UI에 반영
   - HP Gauge와 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI동작
   

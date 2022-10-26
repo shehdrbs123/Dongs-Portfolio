@@ -7,8 +7,8 @@
 |:---:|
 |![미리보기](_Image/EnemyObject%20클래스%20구조.png)|
 
-다음은 모든 EnemyObject의 설명 문서입니다.
- 
+다음은 EnemyObject의 상속 구조도 입니다.<br>
+EnemyObject의 기본 모형에 맞추어 Boss, 추가기능을 하는 Slayer(적2)를 구현하였습니다.
 </center>
 
 ## 바로가기
@@ -26,7 +26,7 @@
 
 ## Spawner
 
-|<H3><b>Spanwer Enemy Spawn 모습</b></H3>|
+|<H3><b>Spanwer의 Enemy Spawn 모습</b></H3>|
 |:---:|
 |![미리보기](_Image/Spawner.gif)|
 

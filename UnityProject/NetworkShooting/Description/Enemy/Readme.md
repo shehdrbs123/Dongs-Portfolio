@@ -1,26 +1,40 @@
 # Enemy
 ## 개요
 
-<center>
-
 |<H3><b>EnemyObject Class 상속 구조도</b></H3>|
 |:---:|
 |![미리보기](_Image/EnemyObject%20클래스%20구조.png)|
 
-다음은 EnemyObject의 상속 구조도 입니다.<br>
-EnemyObject의 기본 모형에 맞추어 Boss, 추가기능을 하는 Slayer(적2)를 구현하였습니다.
-</center>
+- 다음은 EnemyObject의 상속 구조도 입니다.<br>
+- EnemyObject의 기본 모형에 맞추어 Boss, 추가기능을 하는 Slayer(적2)를 구현하였습니다.
+
 
 ## 바로가기
-
+  - [MoveObject](#moveobject)
   - [Spawner](#spawner)
   - [적1](#적1)
   - [적2](#적2)
   - [Boss](#boss)
 
+
+## [코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/2de9f9fe8667c63bb6b2c0fd216942032eaaaf80/UnityProject/NetworkShooting/Description/Enemy/_Scripts)
+
 ## [위로가기](#Enemy)
 
 ## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
+
+<br>
+
+## MoveObject
+
+## 구현내용
+- 이동, 총알발사, 스폰에 관한 함수와 변수를 들고 있는 부모클래스
+- GamePlayer, EnemyObject의 기본이 되는 클래스
+- 이동은 기본적으로 Rigidbody2D에 외부에서 지정한 값으로 마찰력없이 이동
+- CmdFire() 함수로 기본적인 발사를 지원(네트워크 spawn 기능 포함)
+- [Command] 속성을 통해서 서버에서만 실행되는 함수이다.
+
+## [위로가기](#player)
 
 <br>
 
@@ -32,6 +46,7 @@ EnemyObject의 기본 모형에 맞추어 Boss, 추가기능을 하는 Slayer(�
 
 ## 구현 내용 
   - Game이 시작되면 TableSetter로부터 Spawner 자신이 생성 
+    - TableSetter의 대한 내용은 [링크](https://github.com/shehdrbs123/Dongs-Portfolio/tree/2de9f9fe8667c63bb6b2c0fd216942032eaaaf80/UnityProject/NetworkShooting/Description/Networking)내 TableSetter 참조
   - 생성 시
     - Spawner의 Hierarchy에 등록된 적 오브젝트의 수 만큼 SpawnCoroutine을 생성/코루틴 실행
     - 보스가 생성되기 전 실행되는 delegate 메소드 TableSetter.singleton.DestroyWhenGaugeFull에 

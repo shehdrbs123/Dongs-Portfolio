@@ -3,10 +3,8 @@
 
 <center>
 
-
 ## Bullet 상속 구조
 ![이미지](_Image/weapon%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EA%B5%AC%EC%A1%B0.png)
-
 
 </center>
 

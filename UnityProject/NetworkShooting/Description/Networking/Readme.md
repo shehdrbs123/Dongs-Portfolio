@@ -115,11 +115,11 @@
 
 ## LobbyPlayer, GamePlayer
 
-|<H3><b>LobbyPlayer WorkFlow</b></H3>|
+|<H3><b>LobbyPlayer 설계 구조</b></H3>|
 |:---:|
 |![미리보기](_Image/NetworkLobbyPlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D%EB%8F%84.png)|
 
-|<H3><b>GamePlayer WorkFlow</b></H3>|
+|<H3><b>GamePlayer 설계 구조</b></H3>|
 |:---:|
 |![미리보기](_Image/Network%20GamePlayer%20%EA%B5%AC%ED%98%84%20%EB%8F%84%EC%8B%9D.png)|
 
@@ -149,7 +149,7 @@
 
 ## TableSetter
 
-|<H3><b>TableSetter WorkFlow</b></H3>|
+|<H3><b>TableSetter 설계 구조</b></H3>|
 |:---:|
 |![미리보기](_Image/Network%20TableSetter.png)|
 

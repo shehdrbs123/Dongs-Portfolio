@@ -31,8 +31,10 @@
 ## 개발 세부
  - [UI / Scene](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
  - [네트워킹](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Networking)
+ - [Contents]()
  - [Player](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Player)
- - [Monster](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Monster)
+ - [Enemy](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Enemy)
+ - [Bullet]()
  - [포트폴리오 영상](https://youtu.be/9qI8dbMiV2M)
 
 ## 성과

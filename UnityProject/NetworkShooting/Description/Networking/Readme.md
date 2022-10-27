@@ -24,6 +24,7 @@
  - [LobbyPlayer, GamePlayer](#lobbyplayer-gameplayer)
  - [TableSetter](#tablesetter)
 
+## [관련 전체 코드 보기](_Scripts/)
 
 <br>
 
@@ -84,7 +85,7 @@
 <br>
 
 ## NetworkLobbyManager
-|<H3><b>추가 기능에 대한 모식도</b></H3>|
+|<H3><b>자체 확장 기능에 대한 모식도</b></H3>|
  |:---:|
  |![미리보기](_Image/NetworkLobbyManager%20%EC%B6%94%EA%B0%80%ED%95%9C%20%EA%B8%B0%EB%8A%A5.png)|
 
@@ -102,12 +103,13 @@
       - LobbyPlayer-> GamePlayer의 데이터 이동에 사용
       - 이름과 슬롯 위치를 공유
 
-- 싱글턴 패턴으로 사용 필요한 위치에서 기능 or 데이터(읽기전용) 사용
+- 싱글턴 패턴으로 사용, 필요한 위치에서 기능 or 데이터(읽기전용) 사용
   - ConnectScene에서 NetworkLobbyManager에 UI(Panel) 연결
   - 버튼 입력 시 접속요청
   - 이름 공유
   - 접속 종료 요청
   - 네트워크 연결 여부 확인
+- [NetworkLobbyManager 코드보기( NetworkLobbyManager의 자식 클래스)](_Scripts/NetworkLobbyManagerExtend.cs)
 
 ## [위로가기](#네트워킹)
 
@@ -133,7 +135,7 @@
   - LobbyPlayerList에 등록, List로 부터 PlayerInfo slot을 지정받음
   - 추가로 지정된 위치의 Text component의 text를 변경, 이름, Ready 상태 등록
   - [SyncVar] 속성으로 어느 클라이언트 든 데이터변경 발생 시 서버에서 동기화 요청을 수행
-
+  - [NetworkLobbyPlayer 코드보기 (NetworkLobbyPlayer 자식 클래스)](_Scripts/LobbyPlayer.cs)
 
 - GamePlayer
   - NetworkLobbyManager가 Ingame에 진입 시 자동으로 생성하는 Playable Object
@@ -142,7 +144,7 @@
   - OtherUser의 경우 UserUI의 정보를 찾아 보유
     - GamePlayer의 데이터가 변동하게되면 각 UI에 변동정보를 반영
     - [SyncVar] 속성으로 데이터 동기화 같이 수행
-
+  - [GamePlayer 코드보기](_Scripts/GamePlayer.cs)
 ## [위로가기](#네트워킹)
 
 <br>
@@ -166,7 +168,7 @@
   - 본래 기획에서는 다양한 스킬 등을 활용해 위치를 넘나드는 구조였으나 싶었으나 기간의 부족으로 구현 x
   - GamePlayer는 전달받은 슬롯 위치를 이용해 카메라와 위치를 지정하여 사용하게됨
 - 고정위치로 지정되어 슬롯넘버 * slot * 15로 default 위치가 지정됨.
-
+- [TableSetter 코드보기](_Scripts/TableSetter.cs)
 
 ## [위로가기](#네트워킹)
 

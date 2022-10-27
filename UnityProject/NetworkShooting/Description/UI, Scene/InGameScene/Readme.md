@@ -9,8 +9,8 @@
     - GamePlayer를 이용하는 버튼들을 추상화
     - 버튼의 다른 기능 없이 클릭 기능만을 쓰기위해 IPointerUp, Down Handler를 구현
     - GamePlayer가 생성 될 때 button에 자신의 오브젝트값을 전달
+    - [ParentButton 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts/ParentButton.cs)
   - 구현 클래스의 버튼기능은 OnPointerDown, OnPointerUp 에구현되어있음
-
 ## 바로가기
  - [MoveButton](#movebutton)
  - [Gauge](#gauge)
@@ -35,7 +35,7 @@
   - 왼쪽버튼을 누르면 왼쪽으로 이동, 오른쪽 버튼을 누르면 오른쪽 이동
   - ParentButton 상속으로 GamePlayer 참조, 이동방향값을 전달
   - 로컬플레이어의 GamePlayer가 버튼에 연결되어 MoveButton으로 좌우 이동 값 전달
-  
+  - [MoveButton 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts/MoveButton.cs)
 
 
 ## [위로가기](#ingame-scenelobby)

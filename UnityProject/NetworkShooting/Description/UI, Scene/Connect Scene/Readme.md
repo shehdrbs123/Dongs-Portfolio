@@ -110,12 +110,14 @@
   - LobbyPlayer.OnReadyClicked()를 연결
   - LobbyPlayer.SendReadyToBeginMessage(), SendNotReadyToBeginMeesage()로 Ready 상태 서버에 전달
   - 서버는 Ready한 클라이언트 수를 확인해 자동으로 InGameScene 자동 전환
+  - [LobbyPlayer 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/LobbyPlayer.cs)
 - ExitButton
   - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
   - 서버 연결 종료 delegate callback함수 실행
     - 서버가 연결될 당시 ConnectSceneButtonScript에서 종료 함수를 delegate에 연결함
     - NetworkLobbyManager.StopHost(), StopClient() 중 하나 연결
   - UIChangeTo 함수로 MainPanel로 변경
+  - [ConnectSceneButtonScript 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/ConnectSceneButtonScript.cs)
 <br>
 
 ## 세부 구현 내용
@@ -134,6 +136,8 @@
   -  NetworkLobbyManager에 등록된 자신의 이름 확인
   -  받아온 Text Component에 자신의 이름과 현재 Ready상태를 입력
   -  서버에 접속된 순서대로 LobbyPlayer가 생성/반복됨
+  -  [LobbyPlayer 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/LobbyPlayer.cs)
+  -  [LobbyPlayerList 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/LobbyPlayerList.cs)
 
 
 |<H3><b>Ready 후 Text(Ready) 변경 과정</b></H3>|
@@ -145,6 +149,7 @@
      - 이후 ReadyButton을 누르면 연결된 LobbyPlayer.OnReadyClicked()가 실행 
        - SendReadyToBeginMessage() or SendNotReadyToBeginMessage()으로 서버에 Ready값 전달
        - OnClientReady() 이벤트가 발생, 네트워크 내 값을 일치화 시킴
+   - [LobbyPlayer 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/LobbyPlayer.cs)
 
 
 ## [위로가기](#connect-scenelobby)

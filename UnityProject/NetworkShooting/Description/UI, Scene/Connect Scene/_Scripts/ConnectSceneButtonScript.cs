@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections;    
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,11 +11,11 @@ public class ConnectSceneButtonScript : MonoBehaviour {
 	[HideInInspector]
 	public RectTransform presentUI;
 
-    private const int UI_MAIN = 0;
-    private const int UI_HOST = 1;
-    private const int UI_CLI = 2;
-    private const int UI_WAIT = 3;
-    private const int UI_POP = 4;
+	private const int UI_MAIN = 0;
+	private const int UI_HOST = 1;
+	private const int UI_CLI = 2;
+	private const int UI_WAIT = 3;
+	private const int UI_POP = 4;
 	void Start(){
 		lobbyManager = (NetworkLobbyManagerExtend)NetworkLobbyManagerExtend.singleton;
 		lobbyManager.ui = this;
@@ -28,21 +28,21 @@ public class ConnectSceneButtonScript : MonoBehaviour {
 		if (presentUI != null) {
 			presentUI.gameObject.SetActive (false);
 		}
-        int num = 0;
-        switch (name)
-        {
-            case 'm' : num = 0;
-                break;
-            case 'h':  num = 1;
-                break;
-            case 'c':  num = 2;
-                break;
-            case 'w':  num = 3;
-                break;
-            case 'p':  num = 4;
-                break;
-        }
-        presentUI = UI[num];
+		int num = 0;
+		switch (name)
+		{
+			case 'm' : num = 0;
+				break;
+			case 'h':  num = 1;
+				break;
+			case 'c':  num = 2;
+				break;
+			case 'w':  num = 3;
+				break;
+			case 'p':  num = 4;
+				break;
+		}
+		presentUI = UI[num];
 		if (presentUI != null) {
 			presentUI.gameObject.SetActive (true);
 		}
@@ -54,7 +54,7 @@ public class ConnectSceneButtonScript : MonoBehaviour {
 		UIChangeTo ('c');
 	}
 	public void OnClickToHostPanel(){
-        UIChangeTo('h');
+		UIChangeTo('h');
 	}
 
 	public void OnClickCreateHost(){
@@ -97,22 +97,21 @@ public class ConnectSceneButtonScript : MonoBehaviour {
 	}
 
 	public string GetNetworkAddress()
-    {
-        if (NetworkServer.active)
-        {
+	{
+		if (NetworkServer.active)
+		{
 			var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
-            {
-                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                {
+			foreach (var ip in host.AddressList)
+			{
+				if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+				{
 					return ip.ToString();
-                }
-            }
+				}
+			}
 			//https://www.delftstack.com/ko/howto/csharp/get-local-ip-address-in-csharp/
 		}
 		return lobbyManager.networkAddress;
-        
-			
+		
 	}
 	//출처: https://blog.edit.kr/entry/C-사설-공인-IP-구하기-Internal-External-IP-Address [소금인형 - SW개발자?:티스토리]
 	public void OnClickExitToMain(){
@@ -121,7 +120,7 @@ public class ConnectSceneButtonScript : MonoBehaviour {
 				exitDelegate ();
 			}
 		}
-        UIChangeTo('m');
+		UIChangeTo('m');
 	}
 
 }

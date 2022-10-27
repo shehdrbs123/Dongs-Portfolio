@@ -19,7 +19,7 @@
 
 ## [관련 전체 코드 보기](_Scripts/)
 
-## [이전 창으로 돌아가기](../../UI%2C%20Scene/)
+## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
 
 <br>
 
@@ -58,6 +58,7 @@
   - 네트워크 상 모든 EnemyObject가 파괴 될 때 수치가 상승 (<span style="color:#dd6666">빨간색</span>Bar로 표시됨)
   - TableSetter에서 Crisis Gauge 값과 UI를 관리, 해당 값을 UI에 반영
   - HP Gauge와 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI동작
+  - CrisisGauge가 Full 일 때 DestoryWhenGaugeFull delegate를 실행, 존재하는 Spanwer를 전부 Unspawn 시킨다
   - [tableSetter 코드보기](_Scripts/TableSetter.cs)
   
 ## [위로가기](#ingame-scenelobby)

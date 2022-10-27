@@ -53,13 +53,15 @@
 - HP Gauge
   - Local gamePlayer와 연동, HP Data에 따라 자동으로 데이터가 반영됨
   - 두 개의 이미지를 두고 한 개의 이미지 RectTransform.sizeDelta 값을 줄이는 방식으로 동작 
-  - [GamePlayer 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts/GamePlayer.cs)
+  - [GamePlayer 코드보기(SetupLocalPlayer() 참고)](_Scripts/GamePlayer.cs)
 - Boss Warning Gauge
   - 네트워크 상 모든 EnemyObject가 파괴 될 때 수치가 상승 (<span style="color:#dd6666">빨간색</span>Bar로 표시됨)
-  - TableSetter에서 Crisis Gauge 값과 UI를 관리, 해당 값을 UI에 반영
+  - TableSetter에서 Crisis Gauge 값과 UI를 관리
+  - CrisisGauge(게이지값)을 [SyncVar] 속성으로 SyncCrisisGaugeBar()에 연결되 변동 시 자동 반영
   - HP Gauge와 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI동작
   - CrisisGauge가 Full 일 때 DestoryWhenGaugeFull delegate를 실행, 존재하는 Spanwer를 전부 Unspawn 시킨다
-  - [tableSetter 코드보기](_Scripts/TableSetter.cs)
+  - [TableSetter 코드보기](_Scripts/TableSetter.cs)
+  - [Spawner 코드보기(OnEnable 참고)](_Scripts/Spawner.cs)
   
 ## [위로가기](#ingame-scenelobby)
 
@@ -76,8 +78,8 @@
 - UserUI Button
   - 게임씬 진입 당시 GamePlayer 오브젝트 중 다른 유저의 정보가 등록되는 UI, 이름과 HP를 표시
   - 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI 동작
-  - 해당 정보는 네트워크를 통해서 실시간 동기화 됨.
-- [GamePlayer 코드보기]()
+  - 해당 정보는 [SyncVar] 속성으로 네트워크를 통해서 실시간 동기화 됨.
+- [GamePlayer 코드보기(SetupOtherPlayer() 참고)](_Scripts/GamePlayer.cs)
 
 ## [위로가기](#ingame-scenelobby)
 
@@ -100,6 +102,7 @@
   - Button 컴포넌트의  OnClick 이벤트에 IngameButtonScript.OnPressExitButton() 등록
   - NetworkLobbyManager에 종료요청을 한다
   - 종료요청을 받으면 자동으로 LobbyScene(Connect Scene), main panel 화면으로 전환된다.  
+- [IngameButtonScript 코드보기](_Scripts/InGameButtonScript.cs)
 ## [위로가기](#ingame-scenelobby)
 
 <br>

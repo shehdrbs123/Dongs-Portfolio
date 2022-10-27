@@ -17,9 +17,9 @@
  - [UserUI Button](#userui-button)
  - [Pause Panel](#pause-panel)
 
-## [관련 전체 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts)
+## [관련 전체 코드 보기](_Scripts/)
 
-## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
+## [이전 창으로 돌아가기](../../UI%2C%20Scene/)
 
 <br>
 
@@ -53,10 +53,12 @@
 - HP Gauge
   - Local gamePlayer와 연동, HP Data에 따라 자동으로 데이터가 반영됨
   - 두 개의 이미지를 두고 한 개의 이미지 RectTransform.sizeDelta 값을 줄이는 방식으로 동작 
+  - [GamePlayer 코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts/GamePlayer.cs)
 - Boss Warning Gauge
   - 네트워크 상 모든 EnemyObject가 파괴 될 때 수치가 상승 (<span style="color:#dd6666">빨간색</span>Bar로 표시됨)
   - TableSetter에서 Crisis Gauge 값과 UI를 관리, 해당 값을 UI에 반영
   - HP Gauge와 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI동작
+  - [tableSetter 코드보기](_Scripts/TableSetter.cs)
   
 ## [위로가기](#ingame-scenelobby)
 
@@ -74,6 +76,7 @@
   - 게임씬 진입 당시 GamePlayer 오브젝트 중 다른 유저의 정보가 등록되는 UI, 이름과 HP를 표시
   - 마찬가지로 RectTransform.sizeDelta 값을 줄이는 방식으로 UI 동작
   - 해당 정보는 네트워크를 통해서 실시간 동기화 됨.
+- [GamePlayer 코드보기]()
 
 ## [위로가기](#ingame-scenelobby)
 

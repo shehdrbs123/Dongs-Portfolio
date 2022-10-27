@@ -6,10 +6,10 @@
 |![미리보기](../_Image/Connect%20Scene%20UIFlowChart.png)|
 - 다음은 Scene 내 Panel의 Flow 차트를 설명한 이미지 입니다.
 - Connect Scene Button Script/ CommonButton Script는 UI 최상단 오브젝트 컴포넌트로 등록
-- Connect Scene Button Script 
+- Connect Scene Button Script ([코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/ConnectSceneButtonScript.cs))
   - Scene Panel의 관리, 변경 (한번에 한 개의 패널만 존재)
   - 입력 필드를 읽어 서버 생성 혹은 네트워크 연결
-- Common Button Script
+- Common Button Script ([코드보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/CommonButtonScript.cs))
   - Scene 변경
   - 프로그램 종료
   
@@ -21,6 +21,7 @@
  - [Client Panel](#connect-scene-client-panel)
  - [Waitroom Panel](#connect-scene-waitroom-panel)
 
+## [관련 전체 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts)
 
 ## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
 
@@ -43,11 +44,12 @@
   - ConnectButton
     - ConnectSceneButtonScript OnClickToConnectionPanel() 연결됨
     - UIChangeTo 함수로 Client Panel로 변경
+  - [ConnectSceneButtonScript 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/ConnectSceneButtonScript.cs)
 - Scene 변경
   - ExitButton : Main Scene으로 변경 요청
   - CommonButtonScript switchScene 함수로 MainScene으로 씬변경
     - SceneManagement.SceneManager.LoadScene(string)을 이용
-
+  - [CommonButtonScript 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/CommonButtonScript.cs)
 
 ## [위로가기](#connect-scenelobby)
 
@@ -68,6 +70,7 @@
  - ExitButton
    - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
    - UIChangeTo 함수로 MainPanel로 변경
+ - [ConnectSceneButtonScript 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/ConnectSceneButtonScript.cs)
 
 
 ## [위로가기](#connect-scenelobby)
@@ -89,6 +92,7 @@
  - ExitButton
    - ConnectSceneButtonScript.OnClickExitToMain()연결됨
    - UIChangeTo 함수로 MainPanel로 변경
+ - [ConnectSceneButtonScript 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/Connect%20Scene/_Scripts/ConnectSceneButtonScript.cs)
 
 ## [위로가기](#connect-scenelobby)
 
@@ -109,7 +113,7 @@
 - ExitButton
   - ConnectSceneButtonScript.OnClickExitToMain() 연결됨
   - 서버 연결 종료 delegate callback함수 실행
-    - 서버가 연결될 당시 종료함수를 delegate에 연결함
+    - 서버가 연결될 당시 ConnectSceneButtonScript에서 종료 함수를 delegate에 연결함
     - NetworkLobbyManager.StopHost(), StopClient() 중 하나 연결
   - UIChangeTo 함수로 MainPanel로 변경
 <br>

@@ -18,6 +18,8 @@
 - Exit Button
     - CommonButtonScript 내 exitGame 함수로 게임 종료
 
+## [관련 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/blob/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/MainScene/_Scripts/CommonButtonScript.cs)
+
 ## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
 
 

@@ -17,6 +17,8 @@
  - [UserUI Button](#userui-button)
  - [Pause Panel](#pause-panel)
 
+## [관련 전체 코드 보기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene/InGameScene/_Scripts)
+
 ## [이전 창으로 돌아가기](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
 
 <br>

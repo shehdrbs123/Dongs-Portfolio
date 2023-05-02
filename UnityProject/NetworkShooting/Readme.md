@@ -8,6 +8,8 @@
     혼자 플레이영상을 찍어 한대만 플레이 되었습니다.
 </center>
 
+## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)
+
 ## 개요 
 - 안드로이드 4인 비행슈팅 게임
   - 멀티플랫폼 가능(PC <-> Android)
@@ -34,7 +36,6 @@
  - [Player](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Player)
  - [Enemy](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Enemy)
  - [Bullet](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Bullet)
- - [포트폴리오 영상](https://youtu.be/9qI8dbMiV2M)
 
 ## 성과
 - 시스템 구조에 다양한 디자인 패턴을 적용 / 구현

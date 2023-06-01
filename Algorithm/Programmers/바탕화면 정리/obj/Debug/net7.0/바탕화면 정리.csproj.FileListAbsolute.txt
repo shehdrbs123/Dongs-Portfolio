@@ -1,0 +1,15 @@
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.csproj.AssemblyReference.cache
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.GeneratedMSBuildEditorConfig.editorconfig
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.AssemblyInfoInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.AssemblyInfo.cs
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.csproj.CoreCompileInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\bin\Debug\net7.0\바탕화면 정리.exe
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\bin\Debug\net7.0\바탕화면 정리.deps.json
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\bin\Debug\net7.0\바탕화면 정리.runtimeconfig.json
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\bin\Debug\net7.0\바탕화면 정리.dll
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\bin\Debug\net7.0\바탕화면 정리.pdb
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.dll
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\refint\바탕화면 정리.dll
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.pdb
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\바탕화면 정리.genruntimeconfig.cache
+K:\Github\Dongs-Portfolio\Algorithm\Programmers\바탕화면 정리\obj\Debug\net7.0\ref\바탕화면 정리.dll

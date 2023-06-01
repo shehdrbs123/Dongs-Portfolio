@@ -1,0 +1,15 @@
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\bin\Debug\net7.0\dotnetTest.exe
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\bin\Debug\net7.0\dotnetTest.deps.json
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\bin\Debug\net7.0\dotnetTest.runtimeconfig.json
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\bin\Debug\net7.0\dotnetTest.dll
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\bin\Debug\net7.0\dotnetTest.pdb
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.csproj.AssemblyReference.cache
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.GeneratedMSBuildEditorConfig.editorconfig
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.AssemblyInfoInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.AssemblyInfo.cs
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.csproj.CoreCompileInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.dll
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\refint\dotnetTest.dll
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.pdb
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\dotnetTest.genruntimeconfig.cache
+K:\Github\Dongs-Portfolio\Algorithm\dotnetTest\obj\Debug\net7.0\ref\dotnetTest.dll

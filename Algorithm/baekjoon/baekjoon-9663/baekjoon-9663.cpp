@@ -11,10 +11,8 @@ int main()
     int n_Count{};
     int* queenList{};
     int result{};
-
     cin >> n_Count;
     queenList = new int[n_Count] {};
-
 
     nQueen(queenList, n_Count, 0, &result);
     

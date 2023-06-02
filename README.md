@@ -38,7 +38,7 @@
 - 파일 저장을 위한 JsonUtility 사용 경험
 - 프레임 최적화를 위한 Task 비동기 프로그래밍 사용 경험
 
-<!-- 유니티의 UnityEditor 라이브러리 사용 경험 -->
+\\<!-- 유니티의 UnityEditor 라이브러리 사용 경험 -->
 
 <br>
 
@@ -49,8 +49,7 @@
 ## [네트워크 4인 슈팅 게임( in Android and PC )](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
 
 [![미리보기](UnityProject/NetworkShooting.gif)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
-
-<!--## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)-->
+\\<!--## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)-->
 
 ### 개요 
 - 안드로이드 4인 비행슈팅 게임
@@ -79,12 +78,6 @@
 - 데이터 동기화, 서버/클라이언트 구조 확인 등 네트워크 게임 설계/구현 기반지식 획득
 - IP, Port를 통한 접근으로 네트워크 스위치(포트포워드) 지식 습득
 - 졸업프로젝트 통과
-
-### 프로그램 다운로드 링크
-- [다운로드(PC)](/shehdrbs123/Dongs-Portfolio/raw/main/UnityProject/NetworkShooting/SpWar(PC).zip)
-- [다운로드(Android)](/shehdrbs123/Dongs-Portfolio/raw/UnityProject/NetworkShooting/SpWar(%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C).zip)
-
-<a href="/shehdrbs123/Dongs-Portfolio/raw/main/UnityProject/NetworkShooting/SpWar(PC).zip" data-testid="raw-button" data-size="small" data-no-visuals="true" class="types__StyledButton-sc-ws60qy-0 FKJZl" download="true"><span data-component="buttonContent" class="Box-sc-g0xbh4-0 kkrdEu"><span data-component="text">Raw</span></span></a>
 
 
 <br>

@@ -8,9 +8,10 @@
 ---
 
 
-## [3D Jump Game](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/Slippery%20Man)
+## 3D Jump Game
 
-[![미리보기](UnityProject/Jump.gif)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/Slippery%20Man)
+![미리보기](UnityProject/Jump.gif)
+
 ### 개요 
 - 플랫포머 점프 게임으로 맵의 다양한 장애물을 돌파하여 최종점에 오르면 되는게임
 - 플랫폼 : Windows
@@ -38,6 +39,7 @@
 - 파일 저장을 위한 JsonUtility 사용 경험
 - 프레임 최적화를 위한 Task 비동기 프로그래밍 사용 경험
 
+### [자세한 내용은 여기를 눌러주세요](./UnityProject/Slippery%20Man/)
 <!-- 유니티의 UnityEditor 라이브러리 사용 경험 -->
 
 <br>
@@ -46,9 +48,8 @@
 
 <br>
 
-## [네트워크 4인 슈팅 게임( in Android and PC )](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
-
-[![미리보기](UnityProject/NetworkShooting.gif)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
+## 네트워크 4인 슈팅 게임( in Android and PC )
+![미리보기](UnityProject/NetworkShooting.gif)
 <!--## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)-->
 
 ### 개요 
@@ -80,16 +81,18 @@
 - 졸업프로젝트 통과
 
 
+### [자세한 내용은 여기를 눌러주세요](./UnityProject/NetworkShooting/)
 <br>
 
 ---
 
 <br>
 
-## [Doodle 점프 모작](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/JavaProject/Jumping%20Higher)
+## Doodle 점프 모작
   
-  [![미리보기](JavaProject/Jumping.gif)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/JavaProject/Jumping%20Higher)
+  ![미리보기](JavaProject/Jumping.gif)
 
+  
 ### 개요
 - 플랫폼 : PC
 - 개발 도구 : JAVA 8 (17버전 동작 확인), Eclipse
@@ -107,6 +110,7 @@
   - 멀티스레딩 프로그래밍 적용
   - 코드 구조화에 대한 고민과 적용
 
+### [자세한 내용은 여기를 눌러주세요](./JavaProject/EnglishStudy/)
 
 <br>
 

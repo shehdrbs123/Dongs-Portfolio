@@ -38,7 +38,7 @@
 - 파일 저장을 위한 JsonUtility 사용 경험
 - 프레임 최적화를 위한 Task 비동기 프로그래밍 사용 경험
 
-\\<!-- 유니티의 UnityEditor 라이브러리 사용 경험 -->
+<!-- 유니티의 UnityEditor 라이브러리 사용 경험 -->
 
 <br>
 
@@ -49,7 +49,7 @@
 ## [네트워크 4인 슈팅 게임( in Android and PC )](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
 
 [![미리보기](UnityProject/NetworkShooting.gif)](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting)
-\\<!--## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)-->
+<!--## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)-->
 
 ### 개요 
 - 안드로이드 4인 비행슈팅 게임

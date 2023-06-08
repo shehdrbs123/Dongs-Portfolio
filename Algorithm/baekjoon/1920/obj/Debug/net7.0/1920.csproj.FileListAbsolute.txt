@@ -1,0 +1,15 @@
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.csproj.AssemblyReference.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.GeneratedMSBuildEditorConfig.editorconfig
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.AssemblyInfoInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.AssemblyInfo.cs
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.csproj.CoreCompileInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\bin\Debug\net7.0\1920.exe
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\bin\Debug\net7.0\1920.deps.json
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\bin\Debug\net7.0\1920.runtimeconfig.json
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\bin\Debug\net7.0\1920.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\bin\Debug\net7.0\1920.pdb
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\refint\1920.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.pdb
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\1920.genruntimeconfig.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1920\obj\Debug\net7.0\ref\1920.dll

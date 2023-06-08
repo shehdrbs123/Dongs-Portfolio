@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj",
-      "projectName": "dotnetTest",
-      "projectPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj",
+      "projectUniqueName": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\1920\\1920.csproj",
+      "projectName": "1920",
+      "projectPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\1920\\1920.csproj",
       "packagesPath": "C:\\Users\\shehd\\.nuget\\packages\\",
-      "outputPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\obj\\",
+      "outputPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\1920\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

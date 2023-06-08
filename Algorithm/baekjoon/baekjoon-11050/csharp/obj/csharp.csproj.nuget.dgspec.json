@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj": {}
+    "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\baekjoon-11050\\csharp\\csharp.csproj": {}
   },
   "projects": {
-    "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj": {
+    "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\baekjoon-11050\\csharp\\csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj",
-        "projectName": "dotnetTest",
-        "projectPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\dotnetTest.csproj",
+        "projectUniqueName": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\baekjoon-11050\\csharp\\csharp.csproj",
+        "projectName": "csharp",
+        "projectPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\baekjoon-11050\\csharp\\csharp.csproj",
         "packagesPath": "C:\\Users\\shehd\\.nuget\\packages\\",
-        "outputPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\Programmers\\달리기경주\\obj\\",
+        "outputPath": "K:\\Github\\Dongs-Portfolio\\Algorithm\\baekjoon\\baekjoon-11050\\csharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

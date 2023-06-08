@@ -1,0 +1,15 @@
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\bin\Debug\net7.0\1260.exe
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\bin\Debug\net7.0\1260.deps.json
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\bin\Debug\net7.0\1260.runtimeconfig.json
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\bin\Debug\net7.0\1260.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\bin\Debug\net7.0\1260.pdb
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.csproj.AssemblyReference.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.GeneratedMSBuildEditorConfig.editorconfig
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.AssemblyInfoInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.AssemblyInfo.cs
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.csproj.CoreCompileInputs.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\refint\1260.dll
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.pdb
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\1260.genruntimeconfig.cache
+K:\Github\Dongs-Portfolio\Algorithm\baekjoon\1260\obj\Debug\net7.0\ref\1260.dll

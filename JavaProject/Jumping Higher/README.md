@@ -6,10 +6,16 @@
 </center>
 
 
- ### [프로그램 다운로드]()
+ ### [프로그램 다운로드](http://naver.me/FuEHuPTv)
 - Version 8 이상의 자바 필요
 - 내부 배치파일(.bat)을 실행
 
+
+## 개요
+- 플랫폼 : Windows
+- 개발 도구 : JAVA 8 (17버전 동작 확인), Eclipse
+
+<!--
  ## 플레이 스크린샷
 
 <table>
@@ -30,11 +36,7 @@
   </td>
 </tr>
 </table>
-
-## 개요
-- 플랫폼 : PC
-- 개발 도구 : JAVA 8 (17버전 동작 확인), Eclipse
-
+-->
 
 ## 개발 내용 
   - Swing, AWT를 이용한 GUI 구현

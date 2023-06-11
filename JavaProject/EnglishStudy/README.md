@@ -5,13 +5,13 @@
 
 </center>
 
-### [프로그램 다운로드]()
+### [프로그램 다운로드](http://naver.me/FuEHuPTv)
 
 <br>
 
 ## 개요
 - 영어단어 외우기 프로그램 제작
-- 플랫폼 : PC
+- 플랫폼 : Windows
 - 개발 도구 : JAVA 8 (swing, AWT), Eclipse
 - 개발 내용 :
   - Swing, AWT 및 자바 GUI 프로그램 능숙화를 위한 미니 프로젝트 수행

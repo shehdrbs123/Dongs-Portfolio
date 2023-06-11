@@ -8,7 +8,9 @@
     혼자 플레이영상을 찍어 한대만 플레이 되었습니다.
 </center>
 
-## [포트폴리오 영상 링크](https://youtu.be/9qI8dbMiV2M)
+### [프로그램 다운로드]()
+
+<br>
 
 ## 개요 
 - 안드로이드 4인 비행슈팅 게임
@@ -16,11 +18,26 @@
 - UNet(Unity Network) 기반 네트워크
 - 개발 기간 : 2019.9 ~ 12 (3개월)
 
-## 개발 목적
-- 졸업 프로젝트 제출
-- 네트워크 프로그래밍 이해
-- 유니티 프로그래밍 능력 향상
-- 디자인패턴 적용 / 추상화 능력 향상
+## 플레이 스크린샷
+
+<table>
+<tr>
+  <td width="20%">
+    <Image src="PlayScreenShot/ArrowHitBack.jpg">
+  </td>
+  <td width="20%">
+    <Image src="PlayScreenShot/AirUp.jpg">
+  </td>
+</tr>
+<tr>
+  <td>
+    <Image src="PlayScreenShot/BindingPanelAndYAndNo.jpg">
+  </td>
+  <td>
+    <Image src="PlayScreenShot/LadderMove.jpg">
+  </td>
+</tr>
+</table>
 
 ## 개발 내용
 - Unity GUI를 이용, UI 설계
@@ -29,13 +46,7 @@
 - 적 오브젝트 설계 및 구현
   - 적기 2기 (각각 1개 패턴)
   - 보스 1기 ( 4개의 패턴 )
-  
-## 개발 세부
- - [UI / Scene](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/UI%2C%20Scene)
- - [네트워킹](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Networking)
- - [Player](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Player)
- - [Enemy](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Enemy)
- - [Bullet](https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/UnityProject/NetworkShooting/Description/Bullet)
+- 세부내용은 [링크](./Description/)를 눌러주세요
 
 ## 성과
 - 시스템 구조에 다양한 디자인 패턴을 적용 / 구현

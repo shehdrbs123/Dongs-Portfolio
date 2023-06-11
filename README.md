@@ -64,27 +64,22 @@
 </tr>
 </table>
 
-<table width="100%">
+<table width="50%">
 <tr >
-    <td width="50%">DoodleJump 모작</td> 
-    <td width="50%"></td>
+    <td> DoodleJump 모작</td> 
 </tr>
 <tr>
     <td><image src="JavaProject/Jumping.gif"/></td>
-    <td></td>
 
 </tr>
 <tr >
     <td>1인 프로젝트 / 2015</td>
-    <td></td>
 </tr>
 <tr >
     <td>Windows</td> 
-    <td></td>
 </tr>
 <tr >
     <td>Java / Java AWT / Eclipse</td>
-    <td></td>
 </tr>
 <tr>
     <td>
@@ -92,12 +87,10 @@
         - 입력, 그리기, 충돌 분리하고 멀티스레딩을 활용하여 반응성 향상 <br>
         - UI 버튼 구현 <br>
     </td>
-    <td></td>
 </tr>
 <tr>
     <td>
         <a href="https://github.com/shehdrbs123/Dongs-Portfolio/tree/main/JavaProject/Jumping%20Higher">자세히 보기</a>
     </td>
-    <td></td>
 </tr>
 </table>

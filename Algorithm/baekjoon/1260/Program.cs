@@ -12,7 +12,6 @@ public class Program
         Dictionary<int,SortedSet<int>> edgeDic = new Dictionary<int, SortedSet<int>>();
 
         int[] input = null;
-        bool[] visit = null;
         int vertexCount = 0;
         int EdgeSize=0;
         int start=0;

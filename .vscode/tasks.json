@@ -95,7 +95,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Algorithm/dotnetTest/dotnetTest.csproj",
+                "${workspaceFolder}/Algorithm/baekjoon/1920/1920.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -107,7 +107,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Algorithm/dotnetTest/dotnetTest.csproj",
+                "${workspaceFolder}/Algorithm/baekjoon/1920/1920.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -121,7 +121,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Algorithm/dotnetTest/dotnetTest.csproj"
+                "${workspaceFolder}/Algorithm/baekjoon/1920/1920.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -1,3 +1,5 @@
+#프린터 큐
+
 import sys
 input = sys.stdin.readline
 def mySolve() :

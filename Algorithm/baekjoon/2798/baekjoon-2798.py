@@ -3,7 +3,7 @@ arNums = list(map(int,input().split(' ')))
 
 result = 0
 length = len(arNums)
-
+# 재귀를 통한 완전탐색이었구만
 def findNums(arNums,index,selected,sumed) :
         global result
         if selected == 3 :

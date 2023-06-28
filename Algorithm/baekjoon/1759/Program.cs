@@ -32,7 +32,7 @@ public class Solution
         }
         sr.Close();
         sw.Close();
-    }
+    } 
     public void solve(int i)
     {
         if(check.Count > cLength)

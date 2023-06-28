@@ -5,8 +5,6 @@ from collections import deque
 import sys
 input = sys.stdin.readline
 
-
-
 for i in range(int(input())) :
     data = input()
     left = deque()

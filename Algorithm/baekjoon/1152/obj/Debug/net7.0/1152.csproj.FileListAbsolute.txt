@@ -1,0 +1,15 @@
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\bin\Debug\net7.0\1152.exe
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\bin\Debug\net7.0\1152.deps.json
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\bin\Debug\net7.0\1152.runtimeconfig.json
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\bin\Debug\net7.0\1152.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\bin\Debug\net7.0\1152.pdb
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.csproj.AssemblyReference.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.GeneratedMSBuildEditorConfig.editorconfig
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.AssemblyInfoInputs.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.AssemblyInfo.cs
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.csproj.CoreCompileInputs.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\refint\1152.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.pdb
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\1152.genruntimeconfig.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\1152\obj\Debug\net7.0\ref\1152.dll

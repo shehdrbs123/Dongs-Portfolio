@@ -1,0 +1,15 @@
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.csproj.AssemblyReference.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.GeneratedMSBuildEditorConfig.editorconfig
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.AssemblyInfoInputs.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.AssemblyInfo.cs
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.csproj.CoreCompileInputs.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\bin\Debug\net7.0\2839.exe
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\bin\Debug\net7.0\2839.deps.json
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\bin\Debug\net7.0\2839.runtimeconfig.json
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\bin\Debug\net7.0\2839.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\bin\Debug\net7.0\2839.pdb
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\refint\2839.dll
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.pdb
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\2839.genruntimeconfig.cache
+I:\Github\Dongs-Portfolio\Algorithm\baekjoon\2839\obj\Debug\net7.0\ref\2839.dll

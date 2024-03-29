@@ -52,6 +52,18 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "bitset": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "regex": "cpp",
+        "sstream": "cpp",
+        "array": "cpp",
+        "format": "cpp",
+        "future": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "valarray": "cpp",
+        "xhash": "cpp"
     }
 }

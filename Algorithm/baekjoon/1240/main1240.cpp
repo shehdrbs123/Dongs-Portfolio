@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <memory.h>
 using namespace std;
 
 int N,M;
@@ -22,10 +23,9 @@ int main()
 
     for(int i=0;i<M;++i)
     {
-        int length = 0;
         int s, e;
         cin >> s >> e;
-        
+
         if(dp[s][e] !=0 )
         {
             cout << dp[s][e] << '\n';
@@ -36,36 +36,37 @@ int main()
             cout << dp[e][s] << '\n';
             continue;
         }
-            
-        queue<pair<int,int>> q{};
-        for(int i=1;i<=N;++i)
-        {
-            if(dp[s][i] != 0)
-                q.emplace(i,dp[s][i]);
-        }
+
+        queue<pair<int,int>> q;
+        bool visited[N+1];
+
+        memset(visited,0,sizeof(visited));
+
+        q.emplace(s,0);
+        visited[s] = true;
+
         while(!q.empty())
         {
-            auto p = q.front(); q.pop();            
-            int dest = p.first;
-            int length = p.second;
-            int result = dp[dest][e] + length;            
+            auto n = q.front(); q.pop();
+            int dest = n.first;
+            int length = n.second;
+            int result = dp[dest][e] + length; 
+
             if(dp[dest][e] != 0)
             {
-                cout << dp[dest][e] + length << '\n';
-                dp[s][e] = result;
-                dp[e][s] = result;
+                cout << result << '\n';
                 break;
             }
-            
-            for(int i=1;i<=N;++i)
+
+            for(int j=1;j<=N;++j)
             {
-                if(dp[dest][i] != 0)
+                if(!visited[j] && dp[dest][j] != 0)
                 {
-                    dp[s][i] = dp[dest][i] + length;
-                    dp[i][s] = dp[dest][i] + length;
+                    visited[j] = true;
+                    q.emplace(j,length + dp[dest][j]);
                 }
-            }          
+            }
         }
     }
-    
+   
 }

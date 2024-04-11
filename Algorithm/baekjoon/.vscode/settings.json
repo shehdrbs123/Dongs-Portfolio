@@ -64,6 +64,8 @@
         "chrono": "cpp",
         "forward_list": "cpp",
         "valarray": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "charconv": "cpp",
+        "scoped_allocator": "cpp"
     }
 }

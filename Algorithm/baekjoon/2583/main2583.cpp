@@ -11,17 +11,6 @@ int M,N,K;
 int dx[] = {0,1,0,-1};
 int dy[] = {1,0,-1,0};
 
-void print()
-{
-    for(int i=M-1;i>=0;--i)
-    {
-        for(int j=0;j<N;++j)
-        {
-            cout << (int)board[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-}
 
 int main()
 {
@@ -87,8 +76,5 @@ int main()
     for(auto num : vCount)
     {
         cout << num <<' ';
-    }
-
-    //print();
-    
+    }    
 }

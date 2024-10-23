@@ -1,60 +1,57 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <list>
+#include <string>
 
 using namespace std;
 
-
+int N;
+string intStr;
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    string input{};
-    int iCount{};
-    char command[4];
-    list<char> d{};
-    list<char>::iterator pCur{};
-    
-    cin >> input;
-    cin >> iCount;
-    cin.ignore(1);
-    for(int i=0;i<input.size();++i)
+    cin >> intStr;
+    int size = intStr.length();
+    list<char> l;
+    for(int i=0;i<size;++i)
     {
-       d.emplace_back(input[i]);
+        l.push_back(intStr[i]);
     }
+    auto itr = l.end();
     
-    pCur = d.end();
-    for(int i=0;i<iCount;++i)
+    cin >> N;
+    cin.ignore();
+    for(int i=0;i<N;++i)
     {
-        char c{};
-
-        cin.getline(command,4,'\n');
-        c=command[0];
-        
-        if(c == 'P')
+        getline(cin,intStr);
+        char order = intStr[0];
+        switch(order)
         {
-            d.insert(pCur,command[2]);
-        }else if(c == 'D')
-        {
-            if(pCur != d.end())
-                ++pCur;
-        }else if(c == 'L')
-        {
-            if(pCur != d.begin())
-                --pCur;
-        }else if(c == 'B')
-        {
-            if(pCur != d.begin())
-            {
-                --pCur;
-                pCur = d.erase(pCur);
-            }
+            case 'P' :
+                l.insert(itr,intStr[2]);
+                break;
+            case 'L' :
+                if(itr != l.begin())
+                    --itr;
+                break;
+            case 'D' :
+                 if(itr != l.end())
+                    --itr;
+                break;
+            case 'B':
+                if(itr != l.begin())
+                {
+                    auto itr2 = itr;
+                    itr2--;
+                    l.erase(itr2);
+                }
+                break;
         }
     }
-    
-    
-    for(char a : d)
+
+    for(auto c : l)
     {
-        cout << a;
+        cout << c;
     }
-    
 }

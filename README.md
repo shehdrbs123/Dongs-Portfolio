@@ -8,7 +8,7 @@
 
 ## Worked On Project
 <table width="100%">
-<tr >
+<tr>
     <td width="50%">Slippery Guy</td> 
     <td width="50%">4인 2D Shooting</td> 
 </tr>

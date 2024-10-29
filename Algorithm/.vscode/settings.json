@@ -5,6 +5,7 @@
         "utility": "cpp",
         "queue": "cpp",
         "set": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "ios": "cpp"
     }
 }

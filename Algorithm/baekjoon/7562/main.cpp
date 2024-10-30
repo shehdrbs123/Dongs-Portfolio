@@ -1,64 +1,83 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <queue>
+#include <memory.h>
+#include <tuple>
 using namespace std;
 
-int N;
-int l;
-bool visited[301][301]{};
-int dx[8] = {-2,-1, 1, 2,-2,-1,1,2};
-int dy[8] = {-1,-2,-2,-1, 1, 2,2,1};
+int testCase;
+int len;
+int sx,sy;
+int ex,ey;
+int dx[] = {-1, 1, 2,2,1,-1,-2,-2};
+int dy[] = {-2,-2,-1,1,2, 2,1 ,-1};
+int board[301][301];
+
+void print(int len)
+{
+    for(int i=0;i<len;++i)
+    {
+        for(int j=0;j<len;++j)
+        {
+            cout << board[i][j] << ' ';        
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    cin >> N;
     
-    
-    for(int i=0;i<N;++i)
+    cin >> testCase;
+
+    for(int i=0;i<testCase;++i)
     {
-        queue<tuple<int,int,int>> q{};
-        int sx, sy;
-        int tx, ty;
-        cin >> l;
+        cin >> len;
         cin >> sx >> sy;
-        cin >> tx >> ty;
-
-        for(int j=0;j<=l;++j)
+        cin >> ex >> ey;   
+        if(sx == ex && sy == ey)
         {
-            for(int k=0;k<=l;++k)
-            {
-                visited[j][k] = false;
-            }            
-        }
+            cout << 0 << '\n';
+            continue;
+        }     
         
-        q.emplace(sx,sy,0);
-        visited[sx][sy] = true;
+        queue<pair<int,int>> q;
 
-        while(!q.empty())
+        q.emplace(sx,sy);
+        board[sy][sx] = 1;
+        
+        bool find=false;
+
+        while(!q.empty() && !find)
         {
             auto pos = q.front(); q.pop();
-            int x = get<0>(pos);
-            int y = get<1>(pos);
-            int distance = get<2>(pos);
-
-            if(x == tx && y == ty)
-            {
-                cout << distance << '\n';
-                break;
-            }
-
+            int sx,sy;
+            tie(sx,sy) = pos;
+            
             for(int dir=0;dir<8;++dir)
             {
-                int nx = x + dx[dir];
-                int ny = y + dy[dir];
+                int nx = dx[dir] + sx;
+                int ny = dy[dir] + sy;
                 
-                if(nx<0 || nx > l || ny<0 || ny > l) continue;
-                if(visited[nx][ny] == true) continue;
-
-                q.emplace(nx,ny,distance+1);
-                visited[nx][ny] = true;
+                if(nx < 0|| nx>=len || ny < 0 || ny >=len) continue;
+                if(board[ny][nx] > 0) continue;
+                if(nx == ex && ny == ey)
+                {
+                    find = true;
+                    cout << board[sy][sx] << '\n';
+                    break;
+                }
+                
+                q.emplace(nx,ny);
+                board[ny][nx] = board[sy][sx]+1;
+                
             }
+        }
+
+        for(int j=0;j<len;++j)
+        {
+            memset(board,0,(len*sizeof(int))+(301*j*sizeof(int)));
         }
     }
 }

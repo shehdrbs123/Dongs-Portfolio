@@ -6,6 +6,7 @@
         "queue": "cpp",
         "set": "cpp",
         "xutility": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__bit_reference": "cpp"
     }
 }

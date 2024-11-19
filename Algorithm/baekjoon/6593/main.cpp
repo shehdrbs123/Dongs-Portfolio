@@ -1,85 +1,93 @@
-#include <iostream>
-#include <queue>
-#include <tuple>
-#include <memory.h>
-
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int L, R, C;
-
-char field[31][31][31];
-int visited[31][31][31];
+int z,y,x;
 
 int dx[] = {0,1,0,-1,0,0};
 int dy[] = {1,0,-1,0,0,0};
 int dz[] = {0,0,0,0,1,-1};
+
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-
+    
     while(true)
     {
-        int sX,sY,sZ;
-        cin >> L >> R >> C;
-        if(L==0 && R==0 && C==0)
-            return 0;
+        cin >> z >> y >> x;
+        
+        if(z==0 && y==0 && x==0)
+            break;
+        string m[31][31];
+        bool visited[31][31][31] = {0,};
+        int sx,sy,sz;
+        bool isCanStart = false;
+        
 
-        memset(visited,0,sizeof(int)*31*31*31);
-        for(int i=0;i<L;++i)
+        for(int i=0;i<z;++i)
         {
-            for(int j=0;j<R;++j)
+            for(int j=0;j<y;++j)
             {
-                for(int k=0;k<C;++k)
+                cin >> m[i][j];
+                for(int k=0;k<x;++k)
                 {
-                    cin >> field[i][j][k];
-                    if(field[i][j][k] == 'S')
+                    if( m[i][j][k] == 'S' )
                     {
-                        sZ = i;
-                        sY = j;
-                        sX = k;
+                        isCanStart = true;
+                        sx = k;
+                        sy = j;
+                        sz = i;
                     }
                 }
             }
         }
 
-        queue<tuple<int,int,int>> q{};
-        q.emplace(sZ,sY,sX);
+        if(!isCanStart)
+            cout << "Trapped!" <<'\n';
+        
+        queue<tuple<int,int,int,int>> q{};
+        
+        q.emplace(sx,sy,sz,0);
+        visited[sz][sy][sx] = true;
+        
+        bool isEscape = false;
 
-        visited[sZ][sY][sX] = 1;
-        bool isFound = false;
-
-        while(!q.empty() && !isFound)
+        while(!q.empty())
         {
-            int x,y,z;
-            tie(z,y,x) = q.front();
-            q.pop();
-
-            for(int dir=0;dir<6;++dir)
+            auto pos = q.front();q.pop();
+            
+            for(int dir = 0; dir<6;++dir)
             {
-                int nx = x + dx[dir];
-                int ny = y + dy[dir];
-                int nz = z + dz[dir];
-
-                if(nx<0 || nx >= C || ny<0 || ny>=R || nz<0 || nz>=L ) continue;
-                if(visited[nz][ny][nx] > 0) continue;
-                if(field[nz][ny][nx] == '#') continue;
-                if(field[nz][ny][nx] == 'E') 
+                int tx,ty,tz,time;
+                tie(tx,ty,tz,time) = pos;
+                tx += dx[dir];
+                ty += dy[dir];
+                tz += dz[dir];
+                time += 1;
+                
+                if(tx<0 || tx>= x || ty<0 || ty>=y || tz<0 || tz>=z ) continue;
+                if(visited[tz][ty][tx]) continue;
+                if(m[tz][ty][tx] == '#') continue;
+                if(m[tz][ty][tx] == 'E') 
                 {
-                    cout << "Escaped in " << visited[z][y][x] << " minute(s)." << '\n';
-                    isFound = true;
+                    isEscape = true;
+                    cout << "Escaped in " << time << " minute(s).\n";
                     break;
                 }
-                
-                visited[nz][ny][nx] = visited[z][y][x]+1;
-                q.emplace(nz,ny,nx);
+                    
+                q.emplace(tx,ty,tz,time);
+                visited[tz][ty][tx] = true;
+            
             }
+            
+            if(isEscape) break;
+
         }
         
-        if(!isFound)
+        if(!isEscape)
         {
-            cout << "Trapped!" << '\n';
+            cout << "Trapped!" <<'\n';
         }
     }
 }

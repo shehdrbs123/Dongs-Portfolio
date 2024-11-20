@@ -6,12 +6,7 @@
         "queue": "cpp",
         "set": "cpp",
         "xutility": "cpp",
-        "map": "cpp",
-        "deque": "cpp",
-        "list": "cpp",
-        "stack": "cpp",
-        "xhash": "cpp",
-        "xtree": "cpp",
-        "system_error": "cpp"
+        "ios": "cpp",
+        "__bit_reference": "cpp"
     }
 }

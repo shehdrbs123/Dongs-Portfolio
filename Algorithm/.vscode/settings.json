@@ -7,6 +7,13 @@
         "set": "cpp",
         "xutility": "cpp",
         "ios": "cpp",
-        "__bit_reference": "cpp"
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     }
 }

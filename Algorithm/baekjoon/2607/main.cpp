@@ -6,6 +6,15 @@ using namespace std;
 
 int startStr[26];
 
+void print(int * ptr, int size)
+{
+    for(int i=0;i<size;++i)
+    {
+        cout << *(ptr+i) << ' ';
+    }
+    cout << '\n';
+}
+
 int main()
 {
     ios::sync_with_stdio(0);
@@ -18,25 +27,25 @@ int main()
     string first; 
     cin >> first;
     --num;
-
+    cout << "======================================\n";
     for(int i=0;i<first.size();++i)
     {
         ++startStr[first[i]-'A'];
     }
-    
+
     for(int i=0;i<num;++i)
     {
         string other;
         cin >> other;
         
-        if(other.size() > first.size()+1) continue;
+        if(abs((int)first.size() - (int)other.size()) > 1) continue;
 
         int otherStr[26] = {0,};
         for(int j=0;j<other.size();++j)
         {
             ++otherStr[other[j]-'A'];
-        }
-        
+        }     
+
         bool differ = false;
         bool differ2 = false;
         bool isSimilar = true;
@@ -74,7 +83,11 @@ int main()
         }
 
         if(isSimilar)
+        {
+            cout << other <<'\n';
             ++result;
+        }
+            
                     
     }
     cout << result;

@@ -42,11 +42,12 @@ int main(int argc, char* argv[])
     int read_len = 0;
     int str_len = 0;
     int idx = 0;
+    // 데드락 주의
     while(read_len = recv(sock,&buffer[idx++],1,0))
     {
         if(read_len == -1)
             error_handling("recv() error");
-        if(buffer[idx-1] == '\0')
+        if(buffer[idx-1] == '\0') // 데드락 방지용, 아무튼 데드락 주의
             break;
         str_len += read_len;
     }

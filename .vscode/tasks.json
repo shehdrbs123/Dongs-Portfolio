@@ -75,7 +75,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lws2_32"
             ],
             "options": {
                 "cwd": "C:/mingw64/bin"

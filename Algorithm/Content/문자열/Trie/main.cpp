@@ -2,14 +2,15 @@
 #include <fstream>
 #include <vector>
 #include <chrono>
+#include <memory>
 #include "Trie.h"
 
 using namespace std;
 int main()
 {
-    Trie* root;
+    unique_ptr<Trie> root;
     vector<string> vStrVector;
-    root = new Trie{};
+    root = make_unique<Trie>(new Trie{});
     root->Init();
 
     std::ifstream inputFile{"words_alpha.txt"};
@@ -64,6 +65,5 @@ int main()
                 cout << "Can not find\n";
             }
         }
-            
     }
 }

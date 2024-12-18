@@ -18,7 +18,7 @@ std::shared_mutex clientMutex;                 // 동기화를 위한 뮤텍스
 std::vector<SOCKET> clientSockets;
 
 void BroadcastMessage(const SOCKET& sender, std::string message) {
-    std::shared_lock<std::shared_mutex> lock(clientMutex);
+    clientMutex.try_lock();
     for (SOCKET client : clientSockets) {
         if(sender == client) continue;
         send(client, message.c_str(), message.length(), 0);
@@ -64,11 +64,23 @@ int main() {
     std::cout << "Server started on port " << PORT << std::endl;
 
     while (true) {
-        SOCKET clientSocket = accept(serverSocket, nullptr, nullptr);
+        SOCKADDR_IN clientAddr{};
+        int clientSize = sizeof(clientAddr);
+        SOCKET clientSocket = accept(serverSocket, (SOCKADDR*)&clientAddr, &clientSize);
         if (clientSocket != INVALID_SOCKET) {
             std::unique_lock<std::shared_mutex> lock(clientMutex);// 동기화
             clientSockets.emplace_back(clientSocket); 
             clientThreads.emplace_back(std::thread(HandleClient, clientSocket));
+
+            char *clientIP = inet_ntoa(clientAddr.sin_addr);
+            char port[10];
+            itoa(clientSocket,port,10);
+
+            std::string newUserIn(clientIP);
+            newUserIn.append(":").append(port).append(" is entered\n");
+            
+            BroadcastMessage(serverSocket,newUserIn);
+            std::cout << newUserIn;
         }
     }
 

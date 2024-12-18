@@ -2,8 +2,8 @@
 #include <string>
 #include <memory>
 
-// 문자열을 빠르게 검색하고
-// 자동완성 문자열을 
+/// 영어 대소문자 구분 X
+/// 단어 단위로 검색 가능, 영어 이외의 단어 포함 시 
 struct Trie
 {
 private :

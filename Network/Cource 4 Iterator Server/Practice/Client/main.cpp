@@ -4,13 +4,8 @@
 #include <winsock2.h>
 #include <string>
 #include <iostream>
+#include "errorHandling.h"
 
-
-void error_handling(const char* message)
-{
-    printf("%s\n",message);
-    exit(1);
-}
 
 int main(int argc, char* argv[])
 {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("개인정보 수집 유효기간")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f63192fd15909157a3d50fbda338bdb0802bbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("개인정보 수집 유효기간")]
 [assembly: System.Reflection.AssemblyTitleAttribute("개인정보 수집 유효기간")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

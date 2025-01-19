@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("바탕화면 정리")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f63192fd15909157a3d50fbda338bdb0802bbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("바탕화면 정리")]
 [assembly: System.Reflection.AssemblyTitleAttribute("바탕화면 정리")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
